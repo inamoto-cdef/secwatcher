@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>セキュリティニュース & レンサバ応急対策ダッシュボード 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            900: '#0B0F19',
+                            800: '#111827',
+                            700: '#1F2937',
+                            600: '#374151',
+                            accent: '#3B82F6',
+                            critical: '#EF4444',
+                            high: '#F97316',
+                            medium: '#F59E0B',
+                            low: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+            color: #F3F4F6;
+        }
+        /* Fix for iframe / Google Sites Embed visibility & dynamic height */
+        html, body {
+            min-height: 100%;
+            height: auto;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-hover:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 20px -2px rgba(59, 130, 246, 0.15);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1F2937;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #374151;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-30 glass-panel border-b border-gray-800/80 bg-cyber-900/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 font-bold shadow-lg shadow-blue-500/10">
+                    <i class="fa-solid fa-shield-halved text-xl text-blue-400"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg tracking-tight text-white flex items-center gap-2">
+                        SecWatch <span class="text-xs font-mono font-normal px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">マルチソース版 2026</span>
+                    </h1>
+                    <p class="text-xs text-gray-400">JVN / NVD / CISA KEV / OSS公式情報から即時応急対策を抽出</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <!-- Mode Switcher: All vs Shared Hosting Focus -->
+                <div class="bg-cyber-800/90 border border-gray-700/80 p-1 rounded-xl flex items-center space-x-1 shadow-inner">
+                    <button id="mode-btn-all" onclick="setScopeMode('all')" class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-gray-700 text-white shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-globe text-gray-400"></i>
+                        <span>すべて</span>
+                    </button>
+                    <button id="mode-btn-hosting" onclick="setScopeMode('hosting')" class="px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-gray-400 hover:text-white flex items-center gap-1.5">
+                        <i class="fa-solid fa-server text-amber-400"></i>
+                        <span>レンサバ・Web特化</span>
+                        <span id="hosting-badge-count" class="hidden sm:inline-block px-1.5 py-0.2 text-[10px] font-mono bg-amber-500/20 text-amber-300 rounded-full border border-amber-500/30">0</span>
+                    </button>
+                </div>
+
+                <div class="hidden lg:flex items-center text-xs text-gray-400 bg-gray-800/60 px-3 py-1.5 rounded-lg border border-gray-700/50">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
+                    <span id="data-source-badge">Data: Fetching...</span>
+                </div>
+                <button id="refresh-btn" onclick="loadNewsData()" class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-gray-800 transition-colors" title="手動更新">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Rent-Saba Mode Active Notice Bar (Hidden by default) -->
+        <div id="hosting-mode-banner" class="hidden glass-panel rounded-2xl p-4 border-l-4 border-l-amber-500 bg-amber-950/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                    <i class="fa-solid fa-filter text-lg"></i>
+                </div>
+                <div>
+                    <h2 class="font-bold text-sm text-amber-200 flex items-center gap-2">
+                        レンサバ・Webサイト運用 特化モード有効中
+                    </h2>
+                    <p class="text-xs text-amber-300/80">
+                        PHP, WordPress, Apache, Nginx, LiteSpeed, OpenSSL, WAF設定など、共有サーバー・CMS管理に関連する脆弱性のみを抽出しています。
+                    </p>
+                </div>
+            </div>
+            <button onclick="setScopeMode('all')" class="px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-200 border border-amber-500/30 text-xs font-medium transition-all shrink-0">
+                フィルタ解除 (全件表示)
+            </button>
+        </div>
+
+        <!-- Stat Counter Cards -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="glass-panel rounded-2xl p-5 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-medium text-gray-400 uppercase tracking-wider">総検知数</p>
+                    <p id="stat-total" class="text-3xl font-bold font-mono text-white mt-1">0</p>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center text-gray-400">
+                    <i class="fa-solid fa-layer-group text-xl"></i>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-5 flex items-center justify-between border-l-4 border-l-red-500">
+                <div>
+                    <p class="text-xs font-medium text-red-400 uppercase tracking-wider">Critical (緊急対処)</p>
+                    <p id="stat-critical" class="text-3xl font-bold font-mono text-red-400 mt-1">0</p>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400">
+                    <i class="fa-solid fa-triangle-exclamation text-xl"></i>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-5 flex items-center justify-between border-l-4 border-l-orange-500">
+                <div>
+                    <p class="text-xs font-medium text-orange-400 uppercase tracking-wider">High (要警戒)</p>
+                    <p id="stat-high" class="text-3xl font-bold font-mono text-orange-400 mt-1">0</p>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center text-orange-400">
+                    <i class="fa-solid fa-radiation text-xl"></i>
+                </div>
+            </div>
+
+            <div class="glass-panel rounded-2xl p-5 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-medium text-gray-400 uppercase tracking-wider">監視情報源数</p>
+                    <p id="stat-sources" class="text-3xl font-bold font-mono text-blue-400 mt-1">8</p>
+                </div>
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+                    <i class="fa-solid fa-network-wired text-xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intelligence Sources Overview Bar -->
+        <section class="glass-panel rounded-2xl p-4">
+            <div class="flex items-center justify-between mb-3 px-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 flex items-center gap-2">
+                    <i class="fa-solid fa-database text-blue-400"></i> 巡回対象セキュリティ情報源 (情報取得元)
+                </span>
+                <span class="text-[11px] text-gray-500 font-mono">自動連携中</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2" id="source-provider-badges">
+                <!-- Dynamically Generated Source Provider Badges -->
+            </div>
+        </section>
+
+        <!-- Controls: Filters & Search -->
+        <section class="glass-panel rounded-2xl p-6 space-y-4">
+            <!-- Embed Notice Badge -->
+            <div id="iframe-notice" class="hidden p-2 rounded-lg bg-blue-950/40 border border-blue-500/30 text-xs text-blue-300 flex items-center justify-between">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-up-right-from-square"></i> Google Sites / 外部埋め込み表示モードで動作中
+                </span>
+                <span class="text-[10px] text-gray-400">スクロールで全件表示されます</span>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+                
+                <!-- Search Input -->
+                <div class="relative flex-1">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="キーワード、技術 (PHP, WordPress, Nginx, Python等)、CVE番号で検索..." 
+                           class="w-full pl-11 pr-10 py-3 bg-cyber-900/90 border border-gray-700/80 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all">
+                    <button id="clear-search" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white p-1">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Severity Filter Pills -->
+                <div class="flex flex-wrap items-center gap-2" id="severity-filters">
+                    <button data-severity="ALL" class="severity-btn active px-4 py-2 rounded-xl text-xs font-medium transition-all bg-blue-600 text-white shadow-md shadow-blue-600/20">
+                        すべて
+                    </button>
+                    <button data-severity="Critical" class="severity-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-gray-800 text-red-400 hover:bg-gray-700 border border-gray-700">
+                        Critical
+                    </button>
+                    <button data-severity="High" class="severity-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-gray-800 text-orange-400 hover:bg-gray-700 border border-gray-700">
+                        High
+                    </button>
+                    <button data-severity="Medium" class="severity-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-gray-800 text-amber-400 hover:bg-gray-700 border border-gray-700">
+                        Medium
+                    </button>
+                    <button data-severity="Low" class="severity-btn px-4 py-2 rounded-xl text-xs font-medium transition-all bg-gray-800 text-emerald-400 hover:bg-gray-700 border border-gray-700">
+                        Low
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Popular Tags & Source Filter -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2 border-t border-gray-800 text-xs text-gray-400">
+                <div class="flex flex-wrap items-center gap-1.5">
+                    <span class="text-gray-500 font-medium mr-1">人気のタグ:</span>
+                    <div id="popular-tags" class="flex flex-wrap gap-1.5"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid View -->
+        <section>
+            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+            <!-- Empty State -->
+            <div id="empty-state" class="hidden glass-panel rounded-2xl p-12 text-center space-y-4">
+                <div class="w-16 h-16 bg-gray-800/80 rounded-full flex items-center justify-center mx-auto text-gray-500 text-2xl">
+                    <i class="fa-solid fa-shield-virus"></i>
+                </div>
+                <h3 class="text-lg font-bold text-white">該当するセキュリティニュースが見つかりません</h3>
+                <p class="text-sm text-gray-400 max-w-md mx-auto">検索キーワードを変更するか、緊急度フィルターを「すべて」に戻してお試しください。</p>
+                <button onclick="resetFilters()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-medium transition-all">
+                    フィルターを初期化
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Detail Modal -->
+    <div id="detail-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity">
+        <div class="glass-panel w-full max-w-3xl rounded-2xl border border-gray-700 shadow-2xl overflow-hidden flex flex-col max-h-[90vh] transform transition-all">
+            
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-gray-800 flex items-start justify-between bg-cyber-800/50">
+                <div class="space-y-2 pr-6">
+                    <div class="flex flex-wrap items-center gap-2" id="modal-badges"></div>
+                    <h2 id="modal-title" class="text-xl font-bold text-white leading-snug">--</h2>
+                </div>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (Scrollable) -->
+            <div class="p-6 overflow-y-auto space-y-6">
+                <!-- Threat Overview -->
+                <div>
+                    <h3 class="text-xs font-semibold text-blue-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-info"></i> 脅威の概要（なにが危険か）
+                    </h3>
+                    <div class="bg-blue-950/20 border border-blue-500/20 rounded-xl p-4 text-gray-200 text-sm leading-relaxed" id="modal-summary">
+                        --
+                    </div>
+                </div>
+
+                <!-- User Actions (Immediate Countermeasures for Shared Hosting) -->
+                <div>
+                    <h3 class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-wrench"></i> 事業者パッチ適用待ちの間に「手前でできる応急対策」
+                    </h3>
+                    <div class="bg-amber-950/20 border border-amber-500/30 rounded-xl p-4" id="modal-actions-container">
+                        <ul class="space-y-2 text-sm text-amber-100" id="modal-actions">--</ul>
+                    </div>
+                </div>
+
+                <!-- Affected Tech -->
+                <div>
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <i class="fa-solid fa-microchip"></i> 影響を受ける技術・対象
+                    </h3>
+                    <div class="flex flex-wrap gap-2" id="modal-tech">--</div>
+                </div>
+
+                <!-- Tags & Source Link -->
+                <div>
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <i class="fa-solid fa-link"></i> 一次情報・元のリリースリンク
+                    </h3>
+                    <div class="p-3 bg-cyber-900/80 rounded-xl border border-gray-800 flex items-center justify-between">
+                        <div class="truncate max-w-md">
+                            <span class="text-xs font-semibold text-blue-400 block" id="modal-source-name">--</span>
+                            <span class="text-xs text-gray-400 truncate font-mono block" id="modal-source-url">--</span>
+                        </div>
+                        <a id="modal-external-link" href="#" target="_blank" rel="noopener noreferrer" 
+                           class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all shadow-md shadow-blue-600/20 shrink-0">
+                            元記事を開く <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Meta Info -->
+                <div class="text-xs text-gray-500 pt-2 border-t border-gray-800 flex justify-between">
+                    <span>発行/検知日時: <span id="modal-date" class="text-gray-400 font-mono">--</span></span>
+                    <span>情報提供元: <span id="modal-source-provider" class="text-gray-300 font-mono">--</span></span>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 bg-cyber-900 border-t border-gray-800 flex justify-end">
+                <button onclick="closeModal()" class="px-5 py-2 bg-gray-800 hover:bg-gray-700 text-gray-300 rounded-xl text-xs font-medium transition-all">
+                    閉じる
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Expanded Mock Data with Multiple Intelligence Sources
+        const FALLBACK_DATA = [
+            {
+                "original_title": "【緊急】PHP 8.3/8.4におけるマルチバイト処理の未認証RCE脆弱性 (CVE-2026-109618)",
+                "url": "https://www.php.net/security/2026/cve-2026-109618",
+                "source": "PHP Official Announcement",
+                "published": "2026-10-24 14:30:00",
+                "severity": "Critical",
+                "affected_tech": ["PHP 8.3", "PHP 8.4", "WordPress", "Laravel"],
+                "tags": ["CVE-2026-109618", "RCE", "即時対応"],
+                "threat_overview": "PHPコアエンジンの文字処理(mbstring)にバッファオーバーフローが発覚。攻撃者が特定のリクエストを送ることで、サーバー上で任意のスクリプトを実行させられる極めて深刻な脆弱性です。",
+                "user_actions": [
+                    "レンタルサーバー管理画面で「WAF機能（Webアプリファイアウォール）」を直ちに有効化する",
+                    ".user.ini または php.ini で「session.upload_progress.enabled = Off」を追記し一時回避する",
+                    "ロリポップやXserver等の設定で、PHP動作モードを「CGI版」から「モジュール版 / LiteSpeed版」に変更を試みる",
+                    "WordPress等の全ファイルおよびDBのバックアップを手動で即時取得する"
+                ]
+            },
+            {
+                "original_title": "JVNDB-2026-00412: WordPress プラグインにおけるSQLインジェクション脆弱性",
+                "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-00412.html",
+                "source": "JVN (Japan Vulnerability Notes)",
+                "published": "2026-10-23 16:00:00",
+                "severity": "High",
+                "affected_tech": ["WordPress", "MySQL", "PHP Plugin"],
+                "tags": ["JVN", "WordPress", "SQLi", "国内インサイト"],
+                "threat_overview": "国内利用者の多い複数のWordPressプラグインにSQLインジェクションが発見。不正アクセスやデータベース情報の流出につながる危険性があります。",
+                "user_actions": [
+                    "WordPress管理画面のプラグイン一覧で「自動更新」を有効化、または個別に最新版へ更新する",
+                    "不要な停止中プラグインはサーバーセキュリティのため完全に削除（アンインストール）する",
+                    "データベースのプレフィックス(`wp_`)を変更し攻撃リスクを軽減する"
+                ]
+            },
+            {
+                "original_title": "WordPress REST APIを介した任意アクセス制御バイパス (CVE-2026-5821)",
+                "url": "https://wordpress.org/news/2026/10/security-release-6-7-1/",
+                "source": "WordPress Security Advisory",
+                "published": "2026-10-22 09:15:00",
+                "severity": "High",
+                "affected_tech": ["WordPress 6.7", "MySQL", "PHP"],
+                "tags": ["WordPress", "REST API", "CMS"],
+                "threat_overview": "WordPressのREST APIエンドポイントの処理不備により、データベースの不正操作や管理者権限の偽装が可能になる脆弱性です。",
+                "user_actions": [
+                    "WordPressダッシュボードより最新マイナーバージョン（6.7.1）へ手動更新する",
+                    "`.htaccess` を使用して `/wp-json/` エンドポイントへの外部アクセスを一時的に制限する",
+                    "「SiteGuard WP Plugin」等のセキュリティプラグインでログインURLを変更・IP制限を導入する"
+                ]
+            },
+            {
+                "original_title": "CISA KEV追加: Apache HTTP Server 権限昇格およびパス・トラバーサル (CVE-2026-2810)",
+                "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+                "source": "CISA KEV Catalog",
+                "published": "2026-10-22 03:00:00",
+                "severity": "Critical",
+                "affected_tech": ["Apache 2.4", "Linux", "Shared Hosting"],
+                "tags": ["CISA", "KEV", "Apache", "悪用確認済み"],
+                "threat_overview": "CISAが野生下（実際の攻撃環境）での悪用を確認し「Known Exploited Vulnerabilities」に追加。設定不備があるApacheサーバーで任意ファイルへのアクセスを許す可能性があります。",
+                "user_actions": [
+                    "`.htaccess` で `Options -Indexes` を記述しディレクトリ一覧表示を拒否する",
+                    "外部からアクセス不要なドキュメントルート外の重要ファイルへの拒否ルールを追記する",
+                    "レンサバ事業者のWebサーバーアップデートアナウンスを確認する"
+                ]
+            },
+            {
+                "original_title": "OpenSSL 3.4系 暗号ハンドシェイク処理におけるDoS（サービス拒否）の脆弱性",
+                "url": "https://www.openssl.org/news/secadv/20261022.txt",
+                "source": "OpenSSL Security Advisory",
+                "published": "2026-10-21 18:00:00",
+                "severity": "High",
+                "affected_tech": ["OpenSSL 3.4", "TLS 1.3", "Nginx", "Apache"],
+                "tags": ["OpenSSL", "DoS", "TLS", "暗号化"],
+                "threat_overview": "特製された証明書チェーンのハンドシェイク時に無限ループが発生し、WebサーバーのCPU使用率が100%に張り付いてサービスが停止します。",
+                "user_actions": [
+                    "Webサーバー自体のアップデートはレンサバ事業者待ちのため、アプリ側で不要なSSLリクエスト負荷を減らす",
+                    "Cloudflare等の外部CDNを前面に挟み、無効なTLSパケットをエッジ側でドロップさせる",
+                    "サーバー管理画面で同時接続数上限およびタイムアウト値を一時的に短く調整する"
+                ]
+            },
+            {
+                "original_title": "NVD Vulnerability Alert: CVE-2026-9011 LiteSpeed Web Server設定バイパス",
+                "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9011",
+                "source": "NVD (NIST National Vulnerability Database)",
+                "published": "2026-10-20 22:45:00",
+                "severity": "Medium",
+                "affected_tech": ["LiteSpeed", "WordPress", "Cache"],
+                "tags": ["NVD", "CVE-2026-9011", "LiteSpeed", "キャッシュ"],
+                "threat_overview": "高速Webサーバー「LiteSpeed」の特定のキャッシュルール環境下において、静的ファイル保護をバイパスして未認証でアクセス可能になるリスク。",
+                "user_actions": [
+                    "LiteSpeed Cache プラグインを使用している場合、キャッシュルールを一度パージ（消去）する",
+                    "保護対象のダウンロード商品ディレクトリ等に直接アクセスできないよう `.htaccess` でブロックする"
+                ]
+            },
+            {
+                "original_title": "GitHub Advisory: npm サプライチェーン攻撃：認証情報を窃取する悪性パッケージ",
+                "url": "https://github.com/advisories/GHSA-2026-npm-chain",
+                "source": "GitHub Security Advisories",
+                "published": "2026-10-19 11:20:00",
+                "severity": "Medium",
+                "affected_tech": ["Node.js", "npm", "JavaScript"],
+                "tags": ["サプライチェーン", "npm", "GitHub", "情報漏洩"],
+                "threat_overview": "有名パッケージに似せた名前の悪性npmライブラリが複数検出されました。ビルド時に環境変数（APIキーやクラウド認証鍵）を外部サーバーに送信します。",
+                "user_actions": [
+                    "Webサイト構築時に使用する `package-lock.json` の依存関係を監査（npm audit）する",
+                    "レンサバ上の `.env` や設定ファイルに定義しているAPIキー・DBパスワードを一時的にローテーションする"
+                ]
+            },
+            {
+                "original_title": "PyPI Security Notice: 全メンテナーに対する2要素認証（2FA）標準義務化完了",
+                "url": "https://blog.pypi.org/posts/2026-10-15-2fa-enforcement/",
+                "source": "PyPI Official Blog",
+                "published": "2026-10-15 10:00:00",
+                "severity": "Low",
+                "affected_tech": ["Python", "PyPI"],
+                "tags": ["2FA", "PyPI", "ベストプラクティス"],
+                "threat_overview": "Python公式パッケージ管理PyPIにおいてアカウント乗っ取り防止のための2FAが完了。第三者による悪意あるバージョンリリースのリスクが軽減されました。",
+                "user_actions": [
+                    "自社でPythonスクリプトやToolsをレンサバ等で動かしている場合、外部ライブラリのバージョン固定（pip freeze）を再確認する"
+                ]
+            },
+            {
+                "original_title": "Cisco IOS XE ルータにおけるリモートコード実行の脆弱性 (CVE-2026-1920)",
+                "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-iosxe-rce",
+                "source": "Cisco Security Advisory",
+                "published": "2026-10-14 08:00:00",
+                "severity": "Critical",
+                "affected_tech": ["Cisco IOS XE", "Network Hardware"],
+                "tags": ["Cisco", "RCE", "ネットワークインフラ"],
+                "threat_overview": "エンタープライズ向けネットワークルータ機器における特権昇格の危険性。Web UI処理機能のバッファオーバーフローに起因します。",
+                "user_actions": [
+                    "ネットワーク管理者がルータファームウェアの修正パッチを適用（レンサバWeb管理者の応急対策対象外）"
+                ]
+            }
+        ];
+
+        // Rent-Saba / Shared Hosting relevant tech list for auto filtering
+        const HOSTING_TECH_KEYWORDS = [
+            'php', 'wordpress', 'apache', 'nginx', 'litespeed', 'mysql', 'mariadb', 
+            'openssl', 'cms', 'shared hosting', 'waf', '.htaccess', 'user.ini', 'plugin', 'theme'
+        ];
+
+        // List of Active Intelligence Providers
+        const INTELLIGENCE_SOURCES = [
+            { name: 'JVN / JVN iPedia', icon: 'fa-flag', color: 'text-red-400' },
+            { name: 'NVD (NIST)', icon: 'fa-building-columns', color: 'text-blue-400' },
+            { name: 'CISA KEV', icon: 'fa-shield-cat', color: 'text-amber-400' },
+            { name: 'GitHub Advisory', icon: 'fa-brands fa-github', color: 'text-purple-400' },
+            { name: 'PHP Security Advisories', icon: 'fa-brands fa-php', color: 'text-indigo-400' },
+            { name: 'WordPress Core News', icon: 'fa-brands fa-wordpress', color: 'text-sky-400' },
+            { name: 'OpenSSL Project', icon: 'fa-lock', color: 'text-emerald-400' },
+            { name: 'PyPI / npm Feeds', icon: 'fa-cubes', color: 'text-teal-400' }
+        ];
+
+        let allNewsData = [];
+        let currentSeverityFilter = 'ALL';
+        let currentSearchQuery = '';
+        let currentScopeMode = 'all'; // 'all' or 'hosting'
+
+        // DOM elements
+        const newsGrid = document.getElementById('news-grid');
+        const emptyState = document.getElementById('empty-state');
+        const searchInput = document.getElementById('search-input');
+        const clearSearchBtn = document.getElementById('clear-search');
+        const dataSourceBadge = document.getElementById('data-source-badge');
+        const hostingModeBanner = document.getElementById('hosting-mode-banner');
+
+        // Modal DOM Elements
+        const detailModal = document.getElementById('detail-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalSummary = document.getElementById('modal-summary');
+        const modalActions = document.getElementById('modal-actions');
+        const modalTech = document.getElementById('modal-tech');
+        const modalBadges = document.getElementById('modal-badges');
+        const modalDate = document.getElementById('modal-date');
+        const modalSourceName = document.getElementById('modal-source-name');
+        const modalSourceUrl = document.getElementById('modal-source-url');
+        const modalExternalLink = document.getElementById('modal-external-link');
+        const modalSourceProvider = document.getElementById('modal-source-provider');
+
+        // Initial Load
+        window.addEventListener('DOMContentLoaded', () => {
+            // Detect if running inside iframe (e.g., Google Sites Embed)
+            if (window.self !== window.top) {
+                const notice = document.getElementById('iframe-notice');
+                if (notice) notice.classList.remove('hidden');
+            }
+
+            renderSourceBadges();
+            loadNewsData();
+            setupEventListeners();
+        });
+
+        function renderSourceBadges() {
+            const container = document.getElementById('source-provider-badges');
+            container.innerHTML = INTELLIGENCE_SOURCES.map(src => `
+                <div class="p-2 rounded-xl bg-gray-800/50 border border-gray-700/50 flex items-center space-x-2 text-[11px] truncate">
+                    <i class="fa-solid ${src.icon} ${src.color} text-xs"></i>
+                    <span class="text-gray-300 truncate">${src.name}</span>
+                </div>
+            `).join('');
+        }
+
+        // Fetch JSON or fallback
+        async function loadNewsData() {
+            const refreshBtn = document.getElementById('refresh-btn');
+            refreshBtn.classList.add('animate-spin');
+
+            try {
+                // 自動更新されたJSONをキャッシュ回避して読み込み
+                const response = await fetch('security_news_data.json?cache=' + Date.now());
+                if (!response.ok) throw new Error('JSON file not found');
+                
+                const data = await response.json();
+                allNewsData = data;
+                dataSourceBadge.textContent = 'Data: 自動更新版 (security_news_data.json)';
+                dataSourceBadge.classList.add('text-emerald-400');
+            } catch (err) {
+                console.log('Using expanded fallback news data:', err.message);
+                allNewsData = FALLBACK_DATA;
+                dataSourceBadge.textContent = 'Data: デモ用サンプル';
+            } finally {
+                setTimeout(() => refreshBtn.classList.remove('animate-spin'), 500);
+            }
+
+            updateDashboardStats();
+            renderPopularTags();
+            filterAndRenderNews();
+        }
+
+        function setupEventListeners() {
+            searchInput.addEventListener('input', (e) => {
+                currentSearchQuery = e.target.value.trim().toLowerCase();
+                clearSearchBtn.classList.toggle('hidden', currentSearchQuery === '');
+                filterAndRenderNews();
+            });
+
+            document.querySelectorAll('#severity-filters .severity-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('#severity-filters .severity-btn').forEach(b => {
+                        b.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                        b.classList.add('bg-gray-800', 'border', 'border-gray-700');
+                    });
+                    
+                    btn.classList.remove('bg-gray-800', 'border', 'border-gray-700');
+                    btn.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+
+                    currentSeverityFilter = btn.getAttribute('data-severity');
+                    filterAndRenderNews();
+                });
+            });
+
+            detailModal.addEventListener('click', (e) => {
+                if (e.target === detailModal) closeModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        }
+
+        function setScopeMode(mode) {
+            currentScopeMode = mode;
+            const btnAll = document.getElementById('mode-btn-all');
+            const btnHosting = document.getElementById('mode-btn-hosting');
+
+            if (mode === 'hosting') {
+                btnHosting.className = "px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-amber-600 text-white shadow-sm flex items-center gap-1.5";
+                btnAll.className = "px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-gray-400 hover:text-white flex items-center gap-1.5";
+                hostingModeBanner.classList.remove('hidden');
+            } else {
+                btnAll.className = "px-3 py-1.5 rounded-lg text-xs font-medium transition-all bg-gray-700 text-white shadow-sm flex items-center gap-1.5";
+                btnHosting.className = "px-3 py-1.5 rounded-lg text-xs font-medium transition-all text-gray-400 hover:text-white flex items-center gap-1.5";
+                hostingModeBanner.classList.add('hidden');
+            }
+
+            filterAndRenderNews();
+        }
+
+        function isHostingRelevant(item) {
+            const searchStr = [
+                item.original_title,
+                ...(item.affected_tech || []),
+                ...(item.tags || []),
+                item.threat_overview || item.ai_summary || ''
+            ].join(' ').toLowerCase();
+
+            return HOSTING_TECH_KEYWORDS.some(kw => searchStr.includes(kw));
+        }
+
+        function updateDashboardStats() {
+            const hostingRelevantItems = allNewsData.filter(isHostingRelevant);
+            const countBadge = document.getElementById('hosting-badge-count');
+            if (countBadge) countBadge.textContent = hostingRelevantItems.length;
+
+            const activeDataset = (currentScopeMode === 'hosting') ? hostingRelevantItems : allNewsData;
+
+            const total = activeDataset.length;
+            const critical = activeDataset.filter(item => item.severity.toLowerCase() === 'critical').length;
+            const high = activeDataset.filter(item => item.severity.toLowerCase() === 'high').length;
+
+            document.getElementById('stat-total').textContent = total;
+            document.getElementById('stat-critical').textContent = critical;
+            document.getElementById('stat-high').textContent = high;
+            document.getElementById('stat-sources').textContent = INTELLIGENCE_SOURCES.length;
+        }
+
+        function renderPopularTags() {
+            const tagMap = {};
+            const activeDataset = (currentScopeMode === 'hosting') 
+                ? allNewsData.filter(isHostingRelevant) 
+                : allNewsData;
+
+            activeDataset.forEach(item => {
+                (item.tags || []).forEach(t => tagMap[t] = (tagMap[t] || 0) + 1);
+            });
+
+            const sortedTags = Object.keys(tagMap).sort((a,b) => tagMap[b] - tagMap[a]).slice(0, 8);
+            const container = document.getElementById('popular-tags');
+
+            container.innerHTML = sortedTags.map(tag => `
+                <button onclick="setSearchQuery('${tag}')" class="px-2.5 py-1 rounded-lg bg-gray-800/80 hover:bg-blue-600/20 hover:text-blue-400 border border-gray-700/60 transition-colors">
+                    #${tag}
+                </button>
+            `).join('');
+        }
+
+        function filterAndRenderNews() {
+            updateDashboardStats();
+
+            const filtered = allNewsData.filter(item => {
+                // Mode scope filter
+                if (currentScopeMode === 'hosting' && !isHostingRelevant(item)) {
+                    return false;
+                }
+
+                const matchSeverity = (currentSeverityFilter === 'ALL') || 
+                                      (item.severity.toLowerCase() === currentSeverityFilter.toLowerCase());
+
+                let matchSearch = true;
+                if (currentSearchQuery) {
+                    const titleMatch = item.original_title.toLowerCase().includes(currentSearchQuery);
+                    const summaryMatch = (item.threat_overview || item.ai_summary || '').toLowerCase().includes(currentSearchQuery);
+                    const actionsMatch = (item.user_actions || []).some(act => act.toLowerCase().includes(currentSearchQuery));
+                    const techMatch = (item.affected_tech || []).some(tech => tech.toLowerCase().includes(currentSearchQuery));
+                    const tagMatch = (item.tags || []).some(tag => tag.toLowerCase().includes(currentSearchQuery));
+                    const sourceMatch = (item.source || '').toLowerCase().includes(currentSearchQuery);
+                    
+                    matchSearch = titleMatch || summaryMatch || actionsMatch || techMatch || tagMatch || sourceMatch;
+                }
+
+                return matchSeverity && matchSearch;
+            });
+
+            renderGridCards(filtered);
+        }
+
+        function renderGridCards(newsItems) {
+            newsGrid.innerHTML = '';
+
+            if (newsItems.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            newsItems.forEach((item) => {
+                const card = document.createElement('div');
+                card.className = 'glass-panel glass-panel-hover rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 cursor-pointer';
+                card.onclick = () => openModal(item);
+
+                const severityBadge = getSeverityBadgeHTML(item.severity);
+
+                const techBadges = (item.affected_tech || []).slice(0, 3).map(tech => `
+                    <span class="px-2 py-0.5 rounded bg-gray-800 text-gray-300 text-[11px] border border-gray-700 font-mono">${tech}</span>
+                `).join('');
+
+                const firstAction = (item.user_actions && item.user_actions.length > 0) 
+                    ? item.user_actions[0] 
+                    : '管理画面のWAF設定およびプラグイン更新を確認してください';
+
+                const sourceName = item.source || 'セキュリティ情報源';
+
+                card.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between gap-2">
+                            ${severityBadge}
+                            <span class="text-[11px] text-gray-400 font-mono bg-gray-800/80 px-2.5 py-1 rounded-md border border-gray-700/50">
+                                <i class="fa-solid fa-rss mr-1 text-blue-400"></i>${escapeHTML(sourceName)}
+                            </span>
+                        </div>
+
+                        <h3 class="font-bold text-white text-base leading-snug line-clamp-2 hover:text-blue-400 transition-colors">
+                            ${escapeHTML(item.original_title)}
+                        </h3>
+
+                        <p class="text-xs text-gray-400 line-clamp-2 leading-relaxed">
+                            ${escapeHTML(item.threat_overview || item.ai_summary)}
+                        </p>
+
+                        <!-- Immediate Action Highlight Box -->
+                        <div class="p-3 rounded-xl bg-amber-950/30 border border-amber-500/20 text-xs text-amber-200/90 space-y-1">
+                            <span class="font-semibold text-amber-400 flex items-center gap-1 text-[11px] uppercase tracking-wider">
+                                <i class="fa-solid fa-wrench"></i> 今すぐできる応急手配
+                            </span>
+                            <p class="line-clamp-2 text-gray-300">${escapeHTML(firstAction)}</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-gray-800 space-y-3">
+                        <div class="flex flex-wrap gap-1">
+                            ${techBadges}
+                        </div>
+                        
+                        <div class="flex items-center justify-between text-xs pt-1">
+                            <!-- Direct Source Link Button -->
+                            <a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" 
+                               onclick="event.stopPropagation();" 
+                               class="text-blue-400 hover:text-blue-300 hover:underline flex items-center gap-1 font-mono text-[11px]">
+                                <i class="fa-solid fa-link text-[10px]"></i> 一次情報元を見る <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                            </a>
+
+                            <span class="text-gray-400 font-medium flex items-center gap-1 hover:text-white transition-colors">
+                                対策詳細 <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </span>
+                        </div>
+                    </div>
+                `;
+
+                newsGrid.appendChild(card);
+            });
+        }
+
+        function openModal(item) {
+            modalTitle.textContent = item.original_title;
+            modalSummary.textContent = item.threat_overview || item.ai_summary;
+            modalDate.textContent = item.published || '不明';
+            modalSourceProvider.textContent = item.source || '公式セキュリティアナウンス';
+            
+            // Source URLs & Links
+            modalSourceName.textContent = item.source || '一次情報元';
+            modalSourceUrl.textContent = item.url;
+            modalExternalLink.href = item.url;
+
+            // Render User Actions (Countermeasures)
+            const actionsList = item.user_actions || [
+                "レンタルサーバー管理画面で「WAF機能」を有効化する",
+                "`.htaccess` でアクセス制限やセキュリティヘッダーを追加する"
+            ];
+
+            modalActions.innerHTML = actionsList.map((action, idx) => `
+                <li class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">${idx + 1}</span>
+                    <span class="leading-relaxed text-gray-200">${escapeHTML(action)}</span>
+                </li>
+            `).join('');
+
+            // Badges
+            modalBadges.innerHTML = `
+                ${getSeverityBadgeHTML(item.severity)}
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                    <i class="fa-solid fa-rss mr-1"></i>${escapeHTML(item.source || 'マルチソース')}
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Gemini 2.5 Flash 解析済</span>
+            `;
+
+            // Affected Tech Badges
+            modalTech.innerHTML = (item.affected_tech || []).map(tech => `
+                <span class="px-3 py-1 rounded-lg bg-gray-800 text-gray-200 text-xs font-mono border border-gray-700">
+                    <i class="fa-solid fa-cube text-gray-400 mr-1.5"></i>${escapeHTML(tech)}
+                </span>
+            `).join('');
+
+            detailModal.classList.remove('hidden');
+            detailModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            detailModal.classList.add('hidden');
+            detailModal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function getSeverityBadgeHTML(severity) {
+            const sev = (severity || 'low').toLowerCase();
+            let bg = 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
+            let icon = 'fa-shield-halved';
+
+            if (sev === 'critical') {
+                bg = 'bg-red-500/15 text-red-400 border-red-500/40 font-bold animate-pulse';
+                icon = 'fa-triangle-exclamation';
+            } else if (sev === 'high') {
+                bg = 'bg-orange-500/15 text-orange-400 border-orange-500/30 font-semibold';
+                icon = 'fa-radiation';
+            } else if (sev === 'medium') {
+                bg = 'bg-amber-500/15 text-amber-400 border-amber-500/30';
+                icon = 'fa-circle-exclamation';
+            }
+
+            return `
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono border ${bg}">
+                    <i class="fa-solid ${icon}"></i>${severity.toUpperCase()}
+                </span>
+            `;
+        }
+
+        function setSearchQuery(query) {
+            searchInput.value = query;
+            currentSearchQuery = query.toLowerCase();
+            clearSearchBtn.classList.remove('hidden');
+            filterAndRenderNews();
+        }
+
+        function clearSearch() {
+            searchInput.value = '';
+            currentSearchQuery = '';
+            clearSearchBtn.classList.add('hidden');
+            filterAndRenderNews();
+        }
+
+        function resetFilters() {
+            clearSearch();
+            document.querySelector('#severity-filters [data-severity="ALL"]').click();
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            return dateStr.split(' ')[0] || dateStr;
+        }
+
+        function escapeHTML(str) {
+            if (!str) return '';
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+    </script>
+</body>
+</html>

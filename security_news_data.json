@@ -1,5 +1,45 @@
 [
   {
+    "original_title": "CISA KEV: Adobe Commerce and Magento Unrestricted Upload of File with Dangerous Type Vulnerability (CVE-2026-48356)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48356",
+    "source": "CISA KEV (Known Exploited Vulnerabilities)",
+    "published": "2026-10-27",
+    "severity": "Medium",
+    "affected_tech": [
+      "Web"
+    ],
+    "tags": [
+      "Security"
+    ],
+    "threat_overview": "Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in t",
+    "user_actions": [
+      "提供元アナウンスを確認し更新を実行してください。"
+    ]
+  },
+  {
+    "original_title": "CISA KEV: Google Brotli Unchecked Return Value Vulnerability (CVE-2026-111497)",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111497",
+    "source": "CISA KEV (Known Exploited Vulnerabilities)",
+    "published": "2026-10-27",
+    "severity": "Critical",
+    "affected_tech": [
+      "Google Brotli",
+      "Nginx",
+      "Apache HTTP Server",
+      "Web Browsers"
+    ],
+    "tags": [
+      "リモートコード実行",
+      "メモリ破損",
+      "Brotli"
+    ],
+    "threat_overview": "攻撃者が細工したBrotli圧縮ストリームを送信することで、メモリ破壊やリモートでの任意のコード実行、機密情報の漏えいを引き起こす可能性があります。CISAのKEVリストに登録されており、既に実際の攻撃への悪用が確認されている極めて危険な脆弱性です。",
+    "user_actions": [
+      "OSやWebサーバー（Nginx, Apache等）のパッケージマネージャーを使用して、Brotliライブラリを最新バージョンに即時更新する",
+      "利用しているクラウドサービスやソフトウェアベンダーのセキュリティ通知を確認し、修正パッチの適用を最優先で実施する"
+    ]
+  },
+  {
     "original_title": "CISA KEV: PHP Memory Corruption Vulnerability (CVE-2026-109618)",
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
     "source": "CISA KEV (Known Exploited Vulnerabilities)",
@@ -51,44 +91,10 @@
     ]
   },
   {
-    "original_title": "CISA KEV: Collabora Online – Built-in CODE Server OS Command Injection Vulnerability (CVE-2026-110447)",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110447",
-    "source": "CISA KEV (Known Exploited Vulnerabilities)",
-    "published": "2026-10-23",
-    "severity": "Medium",
-    "affected_tech": [
-      "Web"
-    ],
-    "tags": [
-      "Security"
-    ],
-    "threat_overview": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows f",
-    "user_actions": [
-      "提供元アナウンスを確認し更新を実行してください。"
-    ]
-  },
-  {
-    "original_title": "CISA KEV: EG Secure Solutions SiteGuard Server Edition OS Command Injection Vulnerability (CVE-2026-106931)",
-    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-106931",
-    "source": "CISA KEV (Known Exploited Vulnerabilities)",
-    "published": "2026-10-20",
-    "severity": "Medium",
-    "affected_tech": [
-      "Web"
-    ],
-    "tags": [
-      "Security"
-    ],
-    "threat_overview": "EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS comman",
-    "user_actions": [
-      "提供元アナウンスを確認し更新を実行してください。"
-    ]
-  },
-  {
     "original_title": "Informational advisory: Session upload progress",
     "url": "https://www.php.net/index.php#2026-10-23-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 14:04:54",
+    "published": "2026-10-27 19:53:20",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -105,7 +111,7 @@
     "original_title": "Security advisory: Critical remote code execution vulnerabilities, update now",
     "url": "https://www.php.net/index.php#2026-10-21-5",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 14:04:54",
+    "published": "2026-10-27 19:53:20",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -122,7 +128,7 @@
     "original_title": "PHP 8.6.0 RC4 available for testing",
     "url": "https://www.php.net/index.php#2026-10-21-6",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 14:04:54",
+    "published": "2026-10-27 19:53:20",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -139,27 +145,24 @@
     "original_title": "Upcoming Critical PHP Security Release",
     "url": "https://www.php.net/index.php#2026-10-20-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 14:04:54",
-    "severity": "Critical",
+    "published": "2026-10-27 19:53:20",
+    "severity": "Medium",
     "affected_tech": [
-      "PHP"
+      "Web"
     ],
     "tags": [
-      "脆弱性",
-      "緊急アップデート",
-      "RCE"
+      "Security"
     ],
-    "threat_overview": "PHP本体にCVSS v4.0で9.2と評価される極めて深刻な脆弱性が2件存在し、リモートから任意のコードを実行される等の甚大な被害を受ける可能性があります。詳細が公開される前であっても、リリース直後の迅速なパッチ適用に向けた準備が不可欠です。",
+    "threat_overview": "The PHP security team would like to give advance notice of an upcoming security release. It is scheduled for Wednesday, 21 October 2026 at 14:00 UTC. ",
     "user_actions": [
-      "2026年10月21日の修正版リリース後、即座にPHPのアップデートを適用できるようバックアップ等の保守準備を行う",
-      "共有ホスティング利用者は、サーバー管理会社からの更新通知や最新PHPへの切り替えオプションを注視する"
+      "提供元アナウンスを確認し更新を実行してください。"
     ]
   },
   {
     "original_title": "PHP 8.6.0 RC3 available for testing",
     "url": "https://www.php.net/index.php#2026-10-08-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 14:04:54",
+    "published": "2026-10-27 19:53:20",
     "severity": "Medium",
     "affected_tech": [
       "Web"

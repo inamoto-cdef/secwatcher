@@ -1,191 +1,104 @@
 import os
 import json
-import urllib.request
-import xml.etree.ElementTree as ET
-from datetime import datetime
+import datetime
+import feedparser
+from pydantic import BaseModel, Field
+from google import genai
+from google.genai import types
 
-# ==========================================
-# Configuration & Constants
-# ==========================================
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-OUTPUT_FILE = "security_news_data.json"
+# スキーマ定義 (Geminiからの構造化出力用)
+class SecurityAnalysis(BaseModel):
+    threat_overview: str = Field(description="脅威の概要（100〜150文字程度）")
+    severity: str = Field(description="'Critical', 'High', 'Medium', 'Low' のいずれか")
+    affected_tech: list[str] = Field(description="影響を受ける技術・ツール (例: PHP, WordPress, Apache, OpenSSL)")
+    user_actions: list[str] = Field(description="共有ホスティング・レンタルサーバー利用者が今すぐ実行できる応急対策案（2〜4項目）")
 
-# List of RSS / JSON Feeds to monitor
-FEEDS = [
-    {
-        "name": "JVN (Japan Vulnerability Notes)",
-        "type": "rss",
-        "url": "https://jvndb.jvn.jp/ja/rss/jvndb.rdf"
-    },
-    {
-        "name": "CISA KEV (Known Exploited Vulnerabilities)",
-        "type": "cisa_json",
-        "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
-    },
-    {
-        "name": "PHP Security Advisories",
-        "type": "rss",
-        "url": "https://www.php.net/news.rss"
-    }
+# RSSソース一覧
+RSS_SOURCES = [
+    {"name": "JVN (Japan Vulnerability Notes)", "url": "https://jvndb.jvn.jp/rss/jvndb.rdf"},
+    {"name": "CISA KEV Catalog", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml"},
+    {"name": "PHP Security Advisories", "url": "https://www.php.net/news.rss"},
+    {"name": "WordPress Security News", "url": "https://wordpress.org/news/category/security/feed/"}
 ]
 
-# ==========================================
-# Helper Functions
-# ==========================================
+def main():
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("Error: GEMINI_API_KEY is not set.")
+        return
 
-def fetch_rss(url):
-    """Fetch and parse standard RSS/RDF feeds."""
-    items = []
-    try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as response:
-            xml_data = response.read()
-            root = ET.fromstring(xml_data)
-            
-            # Simple RSS / RDF parser
-            for elem in root.iter():
-                if elem.tag.endswith('item'):
-                    title = elem.find('{*}title')
-                    link = elem.find('{*}link')
-                    description = elem.find('{*}description')
-                    pub_date = elem.find('{*}date') or elem.find('{*}pubDate')
-                    
-                    items.append({
-                        "title": title.text if title is not None else "No Title",
-                        "url": link.text if link is not None else "",
-                        "description": description.text if description is not None else "",
-                        "date": pub_date.text if pub_date is not None else datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                    })
-    except Exception as e:
-        print(f"[Error] Failed to fetch RSS from {url}: {e}")
-    return items[:5] # Process top 5 recent entries per feed
-
-def fetch_cisa_json(url):
-    """Fetch CISA KEV JSON catalog."""
-    items = []
-    try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        with urllib.request.urlopen(req, timeout=10) as response:
-            data = json.loads(response.read().decode('utf-8'))
-            vulns = data.get("vulnerabilities", [])
-            for v in vulns[:5]:
-                items.append({
-                    "title": f"CISA KEV: {v.get('vulnerabilityName')} ({v.get('cveID')})",
-                    "url": f"https://nvd.nist.gov/vuln/detail/{v.get('cveID')}",
-                    "description": f"{v.get('shortDescription')} Remediation Note: {v.get('requiredAction')}",
-                    "date": v.get('dateAdded', datetime.now().strftime('%Y-%m-%d'))
-                })
-    except Exception as e:
-        print(f"[Error] Failed to fetch CISA KEV: {e}")
-    return items
-
-def analyze_with_gemini(raw_item, source_name):
-    """Call Gemini API (gemini-3-flash-preview) to format and extract remediation actions."""
-    if not GEMINI_API_KEY:
-        print("[Warning] GEMINI_API_KEY is not set. Returning basic structured item.")
-        return {
-            "original_title": raw_item["title"],
-            "url": raw_item["url"],
-            "source": source_name,
-            "published": raw_item["date"],
-            "severity": "Medium",
-            "affected_tech": ["Web Server", "CMS"],
-            "tags": ["Security", "Patch"],
-            "threat_overview": raw_item["description"][:150] + "...",
-            "user_actions": ["管理画面からシステムやプラグインの更新を確認してください。"]
-        }
-
-    api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={GEMINI_API_KEY}"
+    client = genai.Client(api_key=api_key)
+    model = "gemini-2.5-flash"
     
-    system_prompt = (
-        "You are a senior cybersecurity expert. Analyze the given vulnerability information and return a JSON object with strictly these keys: "
-        "'severity' (one of: Critical, High, Medium, Low), "
-        "'affected_tech' (list of max 4 tech/software strings e.g., ['PHP 8.3', 'WordPress']), "
-        "'tags' (list of 3 short relevant Japanese tags), "
-        "'threat_overview' (concise 2-sentence summary in Japanese focusing on risk), "
-        "'user_actions' (list of 2-3 specific, actionable Japanese emergency steps for web site admins/shared hosting users)."
-    )
+    news_items = []
 
-    user_query = f"Title: {raw_item['title']}\nDescription: {raw_item['description']}\nSource: {source_name}"
+    for src in RSS_SOURCES:
+        try:
+            print(f"Fetching RSS feed from: {src['name']}")
+            feed = feedparser.parse(src["url"])
+            
+            for entry in feed.entries[:3]: # 各ソース最新3件を取得
+                title = entry.get("title", "")
+                link = entry.get("link", "")
+                published = entry.get("published", entry.get("updated", ""))
+                summary = entry.get("summary", title)
 
-    payload = {
-        "contents": [{"parts": [{"text": user_query}]}],
-        "systemInstruction": {"parts": [{"text": system_prompt}]},
-        "generationConfig": {
-            "responseMimeType": "application/json"
-        }
+                prompt = f"""
+以下のセキュリティニュースを分析してください。
+利用者は「レンタルサーバー（共有ホスティング）」でWebサイトやCMSを運用しています。
+事業者によるパッチ適用待ちの間に、アプリ側・手前で今すぐ実行できる現実的な応急対策案（.htaccess設定、WAF有効化、プラグイン一時停止等）を含めて出力してください。
+
+タイトル: {title}
+概要: {summary}
+"""
+                config = types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    response_schema=SecurityAnalysis,
+                    safety_settings=[
+                        types.SafetySetting(
+                            category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                            threshold=types.HarmBlockThreshold.BLOCK_NONE,
+                        )
+                    ]
+                )
+
+                response = client.models.generate_content(
+                    model=model,
+                    contents=prompt,
+                    config=config
+                )
+
+                analysis = SecurityAnalysis.model_validate_json(response.text)
+
+                news_items.append({
+                    "original_title": title,
+                    "url": link,
+                    "source": src["name"],
+                    "published": published,
+                    "severity": analysis.severity,
+                    "affected_tech": analysis.affected_tech,
+                    "tags": [src["name"], analysis.severity],
+                    "threat_overview": analysis.threat_overview,
+                    "user_actions": analysis.user_actions
+                })
+        except Exception as e:
+            print(f"Error processing {src['name']}: {e}")
+
+    # 日本標準時 (JST: UTC+9) で現在の実行日時を取得
+    jst = datetime.timezone(datetime.timedelta(hours=9))
+    current_time_str = datetime.datetime.now(jst).strftime("%Y-%m-%d %H:%M:%S")
+
+    # JSON保存用のデータ構造（データ収集日時 + ニュースリスト）
+    output_data = {
+        "last_updated": current_time_str,
+        "items": news_items
     }
 
-    try:
-        req = urllib.request.Request(
-            api_url,
-            data=json.dumps(payload).encode('utf-8'),
-            headers={'Content-Type': 'application/json'}
-        )
-        with urllib.request.urlopen(req, timeout=15) as res:
-            res_data = json.loads(res.read().decode('utf-8'))
-            json_text = res_data['candidates'][0]['content']['parts'][0]['text']
-            parsed = json.loads(json_text)
+    # security_news_data.json の保存
+    with open("security_news_data.json", "w", encoding="utf-8") as f:
+        json.dump(output_data, f, ensure_ascii=False, indent=2)
 
-            return {
-                "original_title": raw_item["title"],
-                "url": raw_item["url"],
-                "source": source_name,
-                "published": raw_item["date"],
-                "severity": parsed.get("severity", "Medium"),
-                "affected_tech": parsed.get("affected_tech", ["Web"]),
-                "tags": parsed.get("tags", ["脆弱性"]),
-                "threat_overview": parsed.get("threat_overview", raw_item["description"]),
-                "user_actions": parsed.get("user_actions", ["最新バージョンへのアップデートを行ってください。"])
-            }
-    except Exception as e:
-        print(f"[Error] Gemini API failed for {raw_item['title']}: {e}")
-        return {
-            "original_title": raw_item["title"],
-            "url": raw_item["url"],
-            "source": source_name,
-            "published": raw_item["date"],
-            "severity": "Medium",
-            "affected_tech": ["Web"],
-            "tags": ["Security"],
-            "threat_overview": raw_item["description"][:150],
-            "user_actions": ["提供元アナウンスを確認し更新を実行してください。"]
-        }
-
-# ==========================================
-# Main Workflow
-# ==========================================
-
-def main():
-    print("Starting Security Feed Fetching...")
-    all_raw_items = []
-
-    for feed in FEEDS:
-        print(f"Fetching: {feed['name']}...")
-        if feed['type'] == 'rss':
-            items = fetch_rss(feed['url'])
-        elif feed['type'] == 'cisa_json':
-            items = fetch_cisa_json(feed['url'])
-        else:
-            items = []
-
-        for item in items:
-            all_raw_items.append((item, feed['name']))
-
-    print(f"Total raw feeds collected: {len(all_raw_items)}")
-    
-    # Process and summarize top entries
-    processed_news = []
-    for item, source_name in all_raw_items[:12]:
-        print(f"Analyzing with Gemini: {item['title'][:30]}...")
-        result = analyze_with_gemini(item, source_name)
-        processed_news.append(result)
-
-    # Save to JSON
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(processed_news, f, ensure_ascii=False, indent=2)
-
-    print(f"Successfully generated {OUTPUT_FILE} with {len(processed_news)} records.")
+    print(f"Successfully updated security_news_data.json at {current_time_str} with {len(news_items)} items.")
 
 if __name__ == "__main__":
     main()

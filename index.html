@@ -104,9 +104,12 @@
                     </button>
                 </div>
 
-                <div class="hidden lg:flex items-center text-xs text-gray-400 bg-gray-800/60 px-3 py-1.5 rounded-lg border border-gray-700/50">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"></span>
-                    <span id="data-source-badge">Data: Fetching...</span>
+                <!-- 修正後 -->
+                <div class="flex items-center text-xs text-gray-300 bg-gray-800/80 px-3 py-1.5 rounded-lg border border-gray-700/80 gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+                    <span id="data-source-badge" class="font-mono text-emerald-400">Data: 読み込み中...</span>
+                    <span class="text-gray-600">|</span>
+                    <span id="last-updated-timestamp" class="font-mono text-gray-300">更新: -</span>
                 </div>
                 <button id="refresh-btn" onclick="loadNewsData()" class="p-2 text-gray-400 hover:text-white rounded-lg hover:bg-gray-800 transition-colors" title="手動更新">
                     <i class="fa-solid fa-arrows-rotate"></i>

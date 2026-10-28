@@ -7,18 +7,17 @@
     "severity": "Critical",
     "affected_tech": [
       "Adobe Commerce",
-      "Magento"
+      "Magento Open Source"
     ],
     "tags": [
-      "ファイルアップロード制限不備",
-      "リモートコード実行",
-      "ECサイト"
+      "Magento",
+      "脆弱性",
+      "リモートコード実行"
     ],
-    "threat_overview": "危険なファイル形式の制限不備により、攻撃者が任意のコードを実行し、管理者権限やセッションを奪取する恐れがあります。既に悪用が確認されている脆弱性であり、ECサイトの完全な乗っ取りや顧客情報の漏洩に直結する極めて高いリスクがあります。",
+    "threat_overview": "危険な形式のファイルを制限なくアップロードできる脆弱性により、攻撃者がサーバー上で任意のコードを実行し、サイトを完全に制御する恐れがあります。CISAのKEVリストに登録されており、既に悪用が確認されているため、極めて迅速な対応が必要です。",
     "user_actions": [
-      "ベンダーが提供する最新のセキュリティパッチを直ちに適用し、ソフトウェアを最新版へ更新してください。",
-      "サーバー上のファイルアップロードディレクトリを確認し、不審なスクリプトファイルが存在しないかフォレンジック調査を実施してください。",
-      "WAF（Web Application Firewall）を導入または更新し、不正なファイルアップロード試行を遮断してください。"
+      "Adobeが提供する最新のセキュリティアップデートまたは修正パッチを直ちに適用してください。",
+      "不審なファイルのアップロードや予期しないシステム変更がないか、サーバーのログとファイル整合性を確認してください。"
     ]
   },
   {
@@ -29,20 +28,20 @@
     "severity": "Critical",
     "affected_tech": [
       "Google Brotli",
-      "Web Servers",
+      "Web Servers (Nginx/Apache)",
       "Web Browsers",
-      "Node.js"
+      "Cloud Services"
     ],
     "tags": [
+      "ゼロデイ攻撃",
       "メモリ破損",
-      "リモートコード実行",
-      "ゼロデイ"
+      "CISA-KEV"
     ],
-    "threat_overview": "細工されたBrotli圧縮データにより、リモートからメモリ破壊や任意コード実行、情報の漏洩を招く恐れがあります。CISAの既知の悪用脆弱性リストに登録されており、実環境での攻撃リスクが非常に高い状態です。",
+    "threat_overview": "圧縮ライブラリBrotliの不備により、未認証の遠隔攻撃者がメモリ破壊や任意コード実行、機密情報の窃取を行うことが可能です。既に悪用が確認されている脆弱性であり、Webサイトのインフラ全体に深刻な影響を及ぼす恐れがあります。",
     "user_actions": [
-      "OSおよびWebサーバー（Nginx, Apache等）のBrotliライブラリを直ちに最新版へアップデートする",
-      "クラウドサービスやCDNを利用している場合は、プロバイダーの修正状況を確認し適用する",
-      "修正が困難な場合は、一時的にBrotli圧縮を無効化し、Gzip等の代替手段を利用する"
+      "OS、ウェブサーバー（Nginx/Apache等）、およびブラウザを最新のセキュリティパッチ適用済みバージョンへ直ちに更新してください。",
+      "ベンダーからの修正が提供されるまでの間、一時的にBrotli圧縮機能を無効化し、Gzipなどの代替プロトコルの利用を検討してください。",
+      "CISA BOD 26-04の指針に従い、インターネットに公開されている全資産のパッチ適用状況を至急確認してください。"
     ]
   },
   {
@@ -50,22 +49,16 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
     "source": "CISA KEV (Known Exploited Vulnerabilities)",
     "published": "2026-10-26",
-    "severity": "Critical",
+    "severity": "Medium",
     "affected_tech": [
-      "PHP",
-      "Web Server",
-      "CGI/FastCGI"
+      "Web"
     ],
     "tags": [
-      "RCE",
-      "メモリ破壊",
-      "CISA KEV"
+      "Security"
     ],
-    "threat_overview": "PHPに存在するメモリ破壊の脆弱性により、認証なしで遠隔から任意のコードを実行される危険性があります。既に悪用が確認されており、サーバーの完全な乗っ取りや機密情報の流出に直結する極めて重大なリスクです。",
+    "threat_overview": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution. Remediation Note: Apply mitigations in a",
     "user_actions": [
-      "利用しているPHPを各ディストリビューションが提供する最新の修正済みバージョンへ直ちにアップデートしてください。",
-      "サーバーのログを確認し、不審なリモートコード実行の試行やバックドアの設置がないかフォレンジック調査を実施してください。",
-      "修正が完了するまで、Webアプリケーションファイアウォール（WAF）でPHPへの不審なリクエストを遮断する設定を強化してください。"
+      "提供元アナウンスを確認し更新を実行してください。"
     ]
   },
   {
@@ -106,7 +99,7 @@
     "original_title": "Informational advisory: Session upload progress",
     "url": "https://www.php.net/index.php#2026-10-23-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 23:35:04",
+    "published": "2026-10-28 04:30:32",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -123,7 +116,7 @@
     "original_title": "Security advisory: Critical remote code execution vulnerabilities, update now",
     "url": "https://www.php.net/index.php#2026-10-21-5",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 23:35:04",
+    "published": "2026-10-28 04:30:32",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -140,7 +133,7 @@
     "original_title": "PHP 8.6.0 RC4 available for testing",
     "url": "https://www.php.net/index.php#2026-10-21-6",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 23:35:04",
+    "published": "2026-10-28 04:30:32",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -157,7 +150,7 @@
     "original_title": "Upcoming Critical PHP Security Release",
     "url": "https://www.php.net/index.php#2026-10-20-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 23:35:04",
+    "published": "2026-10-28 04:30:32",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -174,7 +167,7 @@
     "original_title": "PHP 8.6.0 RC3 available for testing",
     "url": "https://www.php.net/index.php#2026-10-08-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-27 23:35:04",
+    "published": "2026-10-28 04:30:32",
     "severity": "Medium",
     "affected_tech": [
       "Web"

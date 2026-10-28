@@ -1,27 +1,6 @@
 {
-  "last_updated": "2026-10-28 22:38:15",
+  "last_updated": "2026-10-29 02:59:41",
   "items": [
-    {
-      "original_title": "Informational advisory: Session upload progress",
-      "url": "https://www.php.net/index.php#2026-10-23-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-10-23",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "We suggest you set session.upload_progress.enabled=0 until the next regular bugfix release, to fully protect from an unlikely RCE vector. This setting",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
     {
       "original_title": "Security advisory: Critical remote code execution vulnerabilities, update now",
       "url": "https://www.php.net/index.php#2026-10-21-5",
@@ -38,27 +17,6 @@
         "Medium"
       ],
       "threat_overview": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongl",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 RC4 available for testing",
-      "url": "https://www.php.net/index.php#2026-10-21-6",
-      "source": "PHP Security Advisories",
-      "published": "2026-10-21",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the third release candidate of PHP 8.6.0, RC4. This continues the PHP 8.6 release cycle, whose rough outline is sp",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -100,7 +58,7 @@
         "PHP Security Advisories",
         "Medium"
       ],
-      "threat_overview": "The PHP team is pleased to announce the second release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is s",
+      "threat_overview": "The PHP team is pleased to announce the first release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is sp",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -206,6 +164,69 @@
         "Medium"
       ],
       "threat_overview": "The PHP team is pleased to announce the first beta release of PHP 8.6.0, Beta 1. This continues the PHP 8.6 release cycle, the rough outline of which ",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Alpha 3 available for testing",
+      "url": "https://www.php.net/index.php#2026-07-30-3",
+      "source": "PHP Security Advisories",
+      "published": "2026-07-30",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the second testing release of PHP 8.6.0, Alpha 3. This continues the PHP 8.6 release cycle, the rough outline of w",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Alpha 2 available for testing",
+      "url": "https://www.php.net/index.php#2026-07-16-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-07-16",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the second testing release of PHP 8.6.0, Alpha 2. This continues the PHP 8.6 release cycle, the rough outline of w",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "WordPress 7.1.4",
+      "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
+      "source": "WordPress Security News",
+      "published": "Wed, 28 Oct 2026 17:13:02 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "WordPress Security News",
+        "Medium"
+      ],
+      "threat_overview": "This security release features fixes for multiple issues. Because this is a security release, it is recommended that you update your sites immediately",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -395,27 +416,6 @@
         "Medium"
       ],
       "threat_overview": "WordPress 6.9.2 is now available This is a security release that features several fixes. Because this is a security release, it is recommended that yo",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Dropping security updates for WordPress versions 4.1 through 4.6",
-      "url": "https://wordpress.org/news/2025/06/dropping-security-updates-for-wordpress-versions-4-1-through-4-6/",
-      "source": "WordPress Security News",
-      "published": "Thu, 19 Jun 2025 15:26:06 +0000",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "WordPress Security News",
-        "Medium"
-      ],
-      "threat_overview": "As of July 2025, the WordPress Security Team will no longer provide security updates for WordPress versions 4.1 through 4.6. These versions were first",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

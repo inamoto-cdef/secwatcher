@@ -7,17 +7,18 @@
     "severity": "Critical",
     "affected_tech": [
       "Adobe Commerce",
-      "Magento Open Source"
+      "Magento"
     ],
     "tags": [
-      "Magento",
-      "脆弱性",
-      "リモートコード実行"
+      "任意コード実行",
+      "ファイルアップロード",
+      "CISA KEV"
     ],
-    "threat_overview": "危険な形式のファイルを制限なくアップロードできる脆弱性により、攻撃者がサーバー上で任意のコードを実行し、サイトを完全に制御する恐れがあります。CISAのKEVリストに登録されており、既に悪用が確認されているため、極めて迅速な対応が必要です。",
+    "threat_overview": "攻撃者がサーバーに悪意のあるファイルをアップロードすることで、任意のコードを実行し、管理者権限やセッションを奪取される危険性があります。この脆弱性はCISAの既知の悪用リスト（KEV）に登録されており、実環境での攻撃が確認されているため、極めて迅速な対応が必要です。",
     "user_actions": [
-      "Adobeが提供する最新のセキュリティアップデートまたは修正パッチを直ちに適用してください。",
-      "不審なファイルのアップロードや予期しないシステム変更がないか、サーバーのログとファイル整合性を確認してください。"
+      "アドビが提供する最新のセキュリティアップデートを確認し、直ちにパッチを適用してください。",
+      "サーバー上のファイルシステムをスキャンし、不審なスクリプトや予期しない場所に配置されたファイルがないか確認してください。",
+      "パッチ適用が完了するまで、信頼できないユーザーからのファイルアップロード機能を制限または停止することを検討してください。"
     ]
   },
   {
@@ -28,20 +29,19 @@
     "severity": "Critical",
     "affected_tech": [
       "Google Brotli",
-      "Web Servers (Nginx/Apache)",
-      "Web Browsers",
-      "Cloud Services"
+      "Nginx",
+      "Apache HTTP Server",
+      "Web Browsers"
     ],
     "tags": [
-      "ゼロデイ攻撃",
       "メモリ破損",
-      "CISA-KEV"
+      "リモートコード実行",
+      "Brotli圧縮"
     ],
-    "threat_overview": "圧縮ライブラリBrotliの不備により、未認証の遠隔攻撃者がメモリ破壊や任意コード実行、機密情報の窃取を行うことが可能です。既に悪用が確認されている脆弱性であり、Webサイトのインフラ全体に深刻な影響を及ぼす恐れがあります。",
+    "threat_overview": "遠隔の攻撃者が細工したBrotli圧縮ストリームを送信することで、メモリ破壊や機密情報の漏洩、最悪の場合には任意のコード実行を引き起こす可能性があります。既に悪用が確認されており、Webサーバーやブラウザなどの通信インフラに深刻な影響を及ぼすリスクがあります。",
     "user_actions": [
-      "OS、ウェブサーバー（Nginx/Apache等）、およびブラウザを最新のセキュリティパッチ適用済みバージョンへ直ちに更新してください。",
-      "ベンダーからの修正が提供されるまでの間、一時的にBrotli圧縮機能を無効化し、Gzipなどの代替プロトコルの利用を検討してください。",
-      "CISA BOD 26-04の指針に従い、インターネットに公開されている全資産のパッチ適用状況を至急確認してください。"
+      "Brotliライブラリを使用しているWebサーバーや関連ソフトウェアを、ベンダーが提供する最新パッチへ直ちに更新してください。",
+      "パッチ適用が困難な場合は、一時的にBrotli圧縮機能を無効化し、Gzip等の代替圧縮方式への切り替えを検討してください。"
     ]
   },
   {
@@ -49,16 +49,19 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109618",
     "source": "CISA KEV (Known Exploited Vulnerabilities)",
     "published": "2026-10-26",
-    "severity": "Medium",
+    "severity": "Critical",
     "affected_tech": [
-      "Web"
+      "PHP"
     ],
     "tags": [
-      "Security"
+      "PHP",
+      "リモートコード実行",
+      "悪用確認済み"
     ],
-    "threat_overview": "PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution. Remediation Note: Apply mitigations in a",
+    "threat_overview": "認証不要でリモートから任意のコードを実行可能なメモリ破損の脆弱性で、既に攻撃者による悪用が確認されています。攻撃者にサーバーの完全な制御を奪われ、機密情報の窃取やWebサイトの改ざんを招く極めて高いリスクがあります。",
     "user_actions": [
-      "提供元アナウンスを確認し更新を実行してください。"
+      "PHPを開発元が提供する最新の修正済みバージョンへ直ちにアップデートしてください。",
+      "CISAのBOD 26-04ガイドラインに従い、資産のインターネット露出状況の確認とフォレンジック調査を実施してください。"
     ]
   },
   {
@@ -66,16 +69,20 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109619",
     "source": "CISA KEV (Known Exploited Vulnerabilities)",
     "published": "2026-10-26",
-    "severity": "Medium",
+    "severity": "Critical",
     "affected_tech": [
-      "Web"
+      "PHP"
     ],
     "tags": [
-      "Security"
+      "リモートコード実行",
+      "PHP",
+      "悪用確認済み"
     ],
-    "threat_overview": "PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution. Remediation Note: Apply mitigations i",
+    "threat_overview": "PHPの内部リクエスト状態の管理不備により、認証なしでリモートから任意のコードを実行される恐れがあります。すでに攻撃への悪用が確認されており、サーバーの完全な制御を奪われる極めて高いリスクがあります。",
     "user_actions": [
-      "提供元アナウンスを確認し更新を実行してください。"
+      "PHPをベンダーが提供する最新の修正バージョンへ直ちにアップデートする。",
+      "インターネットに公開されているPHP実行環境の露出状況を再点検し、不要なアクセスを制限する。",
+      "サーバーログを点検し、不審なリクエストや未知のプロセス実行などの侵害痕跡がないか確認する。"
     ]
   },
   {
@@ -83,6 +90,28 @@
     "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114625",
     "source": "CISA KEV (Known Exploited Vulnerabilities)",
     "published": "2026-10-23",
+    "severity": "Critical",
+    "affected_tech": [
+      "Arista VeloCloud Orchestrator",
+      "VeloCloud Orchestrator on-prem"
+    ],
+    "tags": [
+      "SQLインジェクション",
+      "特権昇格",
+      "悪用確認済み"
+    ],
+    "threat_overview": "遠隔の攻撃者がSQL注入攻撃を通じて特権機能に不正アクセスし、オーケストレーターの制御を完全に奪取する恐れがあります。既に悪用が確認されており、管理下のデータやネットワークインフラ全体の機密性・完全性・可用性が損なわれる深刻なリスクが存在します。",
+    "user_actions": [
+      "ベンダーの指示に従い、最新の修正パッチを最優先で適用する",
+      "オーケストレーターの管理インターフェースをインターネットから隔離し、アクセスを制限する",
+      "システムのログを確認し、不正なアクセスや不審なデータベース操作の痕跡がないか調査する"
+    ]
+  },
+  {
+    "original_title": "Updated PHP Windows builds for Brotli security fix",
+    "url": "https://www.php.net/index.php#2026-10-26-1",
+    "source": "PHP Security Advisories",
+    "published": "2026-10-28 11:02:42",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -90,7 +119,7 @@
     "tags": [
       "Security"
     ],
-    "threat_overview": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functional",
+    "threat_overview": "The PHP team announces updated Windows builds: PHP 8.5.12-1, 8.4.27-1, 8.3.36-1 and 8.2.35-1. These builds include Brotli 1.2.1, which fixes CVE-2026-",
     "user_actions": [
       "提供元アナウンスを確認し更新を実行してください。"
     ]
@@ -99,7 +128,7 @@
     "original_title": "Informational advisory: Session upload progress",
     "url": "https://www.php.net/index.php#2026-10-23-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-28 04:30:32",
+    "published": "2026-10-28 11:02:42",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -116,7 +145,7 @@
     "original_title": "Security advisory: Critical remote code execution vulnerabilities, update now",
     "url": "https://www.php.net/index.php#2026-10-21-5",
     "source": "PHP Security Advisories",
-    "published": "2026-10-28 04:30:32",
+    "published": "2026-10-28 11:02:42",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -133,24 +162,29 @@
     "original_title": "PHP 8.6.0 RC4 available for testing",
     "url": "https://www.php.net/index.php#2026-10-21-6",
     "source": "PHP Security Advisories",
-    "published": "2026-10-28 04:30:32",
-    "severity": "Medium",
+    "published": "2026-10-28 11:02:42",
+    "severity": "Critical",
     "affected_tech": [
-      "Web"
+      "PHP 8.6.0 RC1",
+      "PHP 8.6.0 RC2",
+      "PHP 8.6.0 RC3"
     ],
     "tags": [
-      "Security"
+      "リモートコード実行",
+      "PHP 8.6",
+      "脆弱性修正"
     ],
-    "threat_overview": "The PHP team is pleased to announce the third release candidate of PHP 8.6.0, RC4. This continues the PHP 8.6 release cycle, whose rough outline is sp",
+    "threat_overview": "認証不要で遠隔から任意のコードを実行（RCE）できる2件の深刻な脆弱性が修正されました。以前の開発版ビルドを使用している場合、攻撃者によってサーバーが完全に制御される極めて高いリスクがあります。",
     "user_actions": [
-      "提供元アナウンスを確認し更新を実行してください。"
+      "PHP 8.6.0のRC1〜RC3を使用している場合は、直ちにRC4以降へアップデートする",
+      "本バージョンは開発テスト用であるため、絶対に本番環境（プロダクション）で使用しない"
     ]
   },
   {
     "original_title": "Upcoming Critical PHP Security Release",
     "url": "https://www.php.net/index.php#2026-10-20-1",
     "source": "PHP Security Advisories",
-    "published": "2026-10-28 04:30:32",
+    "published": "2026-10-28 11:02:42",
     "severity": "Medium",
     "affected_tech": [
       "Web"
@@ -159,23 +193,6 @@
       "Security"
     ],
     "threat_overview": "The PHP security team would like to give advance notice of an upcoming security release. It is scheduled for Wednesday, 21 October 2026 at 14:00 UTC. ",
-    "user_actions": [
-      "提供元アナウンスを確認し更新を実行してください。"
-    ]
-  },
-  {
-    "original_title": "PHP 8.6.0 RC3 available for testing",
-    "url": "https://www.php.net/index.php#2026-10-08-1",
-    "source": "PHP Security Advisories",
-    "published": "2026-10-28 04:30:32",
-    "severity": "Medium",
-    "affected_tech": [
-      "Web"
-    ],
-    "tags": [
-      "Security"
-    ],
-    "threat_overview": "The PHP team is pleased to announce the second release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is s",
     "user_actions": [
       "提供元アナウンスを確認し更新を実行してください。"
     ]

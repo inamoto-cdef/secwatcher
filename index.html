@@ -102,7 +102,7 @@
                     </button>
                 </div>
 
-                <!-- Always visible Data Badge & Timestamp -->
+                <!-- Data Badge & Timestamp -->
                 <div class="flex items-center text-xs text-gray-300 bg-gray-800/80 px-2.5 sm:px-3 py-1.5 rounded-lg border border-gray-700/80 gap-2 font-mono">
                     <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
                     <span id="data-source-badge" class="text-emerald-400 hidden md:inline">Data: 読み込み中...</span>
@@ -330,7 +330,7 @@
                 "original_title": "【緊急】PHP 8.3/8.4におけるマルチバイト処理の未認証RCE脆弱性 (CVE-2026-109618)",
                 "url": "https://www.php.net/security/2026/cve-2026-109618",
                 "source": "PHP Official Announcement",
-                "published": "2026-10-24 14:30:00",
+                "published": "2026-10-28 14:30:00",
                 "severity": "Critical",
                 "affected_tech": ["PHP 8.3", "PHP 8.4", "WordPress", "Laravel"],
                 "tags": ["CVE-2026-109618", "RCE", "即時対応"],
@@ -414,15 +414,22 @@
                 const response = await fetch('security_news_data.json?cache=' + Date.now());
                 if (!response.ok) throw new Error('JSON file not found');
                 
-                const data = await response.json();
-                allNewsData = data;
+                const responseData = await response.json();
                 
                 dataSourceBadge.textContent = 'Data: 自動更新版';
                 dataSourceBadge.className = 'text-emerald-400 font-mono';
 
-                // 最上位データの published から最新日時を抽出
-                const latestDate = data[0]?.published || '取得済';
-                lastUpdatedTimestamp.textContent = `更新: ${formatDateShort(latestDate)}`;
+                // 配列形式とオブジェクト形式の両方に対応
+                if (Array.isArray(responseData)) {
+                    allNewsData = responseData;
+                    const latestDate = responseData[0]?.published || '';
+                    lastUpdatedTimestamp.textContent = `更新: ${formatDateShort(latestDate)}`;
+                } else {
+                    allNewsData = responseData.items || [];
+                    const updateTime = responseData.last_updated || '';
+                    lastUpdatedTimestamp.textContent = `更新: ${formatDateShort(updateTime)}`;
+                }
+
             } catch (err) {
                 console.log('Using fallback news data:', err.message);
                 allNewsData = FALLBACK_DATA;
@@ -440,6 +447,9 @@
 
         function formatDateShort(str) {
             if (!str) return '--/--';
+            // YYYY-MM-DD HH:mm:ss から MM-DD HH:mm の形式を抽出
+            const match = str.match(/(\d{2}-\d{2}\s+\d{2}:\d{2})/);
+            if (match) return match[1];
             return str.replace(/^\d{4}-/, '').slice(0, 11);
         }
 

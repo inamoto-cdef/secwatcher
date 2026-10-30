@@ -1,27 +1,6 @@
 {
-  "last_updated": "2026-10-30 06:35:57",
+  "last_updated": "2026-10-30 10:38:42",
   "items": [
-    {
-      "original_title": "Updated PHP Windows builds for Brotli security fix",
-      "url": "https://www.php.net/index.php#2026-10-26-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-10-26",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team announces updated Windows builds: PHP 8.5.12-1, 8.4.27-1, 8.3.36-1 and 8.2.35-1. These builds include Brotli 1.2.1, which fixes CVE-2026-",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
     {
       "original_title": "Informational advisory: Session upload progress",
       "url": "https://www.php.net/index.php#2026-10-23-1",
@@ -206,6 +185,27 @@
         "Medium"
       ],
       "threat_overview": "The State of PHP survey is still open, but not for much longer. It asks how PHP is working for you: what you build with, what is painful, and what you",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Beta 1 is available for testing",
+      "url": "https://www.php.net/index.php#2026-08-13-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-08-13",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the first beta release of PHP 8.6.0, Beta 1. This continues the PHP 8.6 release cycle, the rough outline of which ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

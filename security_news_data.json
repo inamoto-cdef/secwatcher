@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-06 16:44:41",
+  "last_updated": "2026-11-07 00:44:11",
   "items": [
     {
-      "original_title": "日立ディスクアレイシステムにおけるSVP 脆弱性対策について　(2026年9月分)",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042179.html",
+      "original_title": "オラクルのOracle Purchasingにおけるクロスサイトリクエストフォージェリの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042401.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-06T10:13+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft製品に対して、以下に示す脆弱性が公開されました。\n[脆弱性の内容]\n<ol><li>WinSock 用 Windows Ancillary Function Driver の特権の昇格の脆弱性 (CVE-2026-50349)</li><li>Windows VHD ミニポート ド",
+      "threat_overview": "Oracle E-Business SuiteのOracle Purchasing製品（コンポーネント：承認）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は簡単に悪用可能であり、HTTP経由でネットワークアクセスが可能な認証されていない",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042178.html",
+      "original_title": "オラクルのOracle Purchasingにおける不正な認証に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042400.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:21+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Google Chromeのバージョン157.0.8103.38より前のSkiaにおけるバッファオーバーフローの脆弱性により、リモート攻撃者は細工されたHTMLページを介してサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumのセキュリティ重大度は「高」と評価されています",
+      "threat_overview": "Oracle E-Business SuiteのOracle Purchasing製品（コンポーネント：PO View Document）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。ネットワーク経由でHTTPアクセス可能な低権限の攻撃者が容易に悪用",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042177.html",
+      "original_title": "オラクルのOracle Partner Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042399.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "157.0.8103.38より前のGoogle ChromeのWebGPUにおけるUse after freeの脆弱性により、リモート攻撃者が細工されたHTMLページを介してサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度は高です）",
+      "threat_overview": "Oracle E-Business SuiteのOracle Partner Management製品には、内部操作コンポーネントに関する脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は悪用が困難ですが、HTTP経由でネットワークアクセスが可",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける権限管理に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042176.html",
+      "original_title": "オラクルのOracle Partner Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042398.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "iOS版Google Chromeのバージョン157.0.8103.38未満におけるナビゲーション時の不適切な特権管理の脆弱性により、レンダラープロセスを侵害したリモート攻撃者が、細工されたHTMLページを通じてサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumセキュリ",
+      "threat_overview": "Oracle E-Business SuiteのOracle Partner Management製品（コンポーネント：内部操作）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTPS経由でネットワークアクセスが可能な権限の低い攻撃者によって容易に",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける再帰制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042175.html",
+      "original_title": "オラクルのOracle Partner Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042397.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "157.0.8103.38以前のGoogle ChromeにおけるSVGの制御されていない再帰により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの深刻度は低いです）",
+      "threat_overview": "Oracle E-Business SuiteのOracle Partner Management製品（コンポーネント：内部操作）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。ネットワーク経由でHTTPを通じて低権限の攻撃者が悪用しやすい脆弱性により",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける型の取り違えに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042174.html",
+      "original_title": "オラクルのOracle Partner Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042396.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "157.0.8103.38以前のGoogle ChromeのV8における型混乱により、リモートの攻撃者が悪意のあるHTMLページを介してサンドボックス内部で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度は高いです）",
+      "threat_overview": "Oracle E-Business SuiteのOracle Partner Management製品（コンポーネント：内部操作）における脆弱性について述べます。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。ネットワーク経由でHTTPにアクセス可能な権限の低い攻撃者が悪",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042173.html",
+      "original_title": "オラクルのOracle Applications Managerにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042395.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Google Chrome 157.0.8103.38より前のバージョンのPrintingにおけるUse after freeの脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumのセキュリティ重大度は高です",
+      "threat_overview": "Oracle E-Business SuiteのOracle Applications Manager製品（コンポーネント：Diagnostics）には脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は容易に悪用可能であり、HTTP経由でネット",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける例外的な状態のチェックに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042172.html",
+      "original_title": "アップルのmacOSにおける情報漏えいに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042394.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "157.0.8103.38より前のGoogle ChromeのGPUにおける不適切な状態検証により、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを通じてサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumセキュリティ重大度：高です）",
+      "threat_overview": "この問題は脆弱なコードを削除することで対処されました。この問題は macOS Golden Gate 27.2、macOS Sequoia 15.8.2、macOS Tahoe 26.7.2 で修正されています。この脆弱性により、アプリケーションが機密ユーザーデータにアクセスできる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042171.html",
+      "original_title": "アップルのmacOSにおける競合状態に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042393.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "157.0.8103.38 未満の Google Chrome の DOM における Use After Free の脆弱性により、リモートの攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの重大度は高と評価さ",
+      "threat_overview": "競合状態は追加の検証によって対処されました。この問題は macOS Golden Gate 27.2、macOS Sequoia 15.8.2、および macOS Tahoe 26.7.2 で修正されています。アプリケーションがファイルシステムの保護された部分を変更できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのGoogle Chromeにおける不正な認証に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042170.html",
+      "original_title": "アップルのmacOSにおけるバッファエラーの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042392.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-05T16:20+09:00",
+      "published": "2026-11-06T13:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Google Chrome バージョン 157.0.8103.38 より前の FileSystem における誤った認可のため、リモート攻撃者がソーシャルエンジニアリングを利用して細工された HTML ページを介し、サンドボックス外で任意のコードを実行できる可能性がありました。（Chromium セキ",
+      "threat_overview": "この問題はメモリ処理の改善によって対処されました。この問題はmacOS Golden Gate 27.2およびmacOS Tahoe 26.7.2で修正されています。アプリケーションが予期しないシステム終了を引き起こしたり、プロセスメモリを破損させる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

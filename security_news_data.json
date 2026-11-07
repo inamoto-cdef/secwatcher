@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-08 00:29:46",
+  "last_updated": "2026-11-08 04:57:34",
   "items": [
     {
       "original_title": "Siemens製品に対するアップデート（2026年11月）",
@@ -212,27 +212,6 @@
       ]
     },
     {
-      "original_title": "PHP 8.6.0 RC5 available for testing",
-      "url": "https://www.php.net/index.php#2026-11-05-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-11-05",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the fourth release candidate of PHP 8.6.0, RC5. This continues the PHP 8.6 release cycle, whose rough outline is s",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
       "original_title": "Updated PHP Windows builds for Brotli security fix",
       "url": "https://www.php.net/index.php#2026-10-26-1",
       "source": "PHP Security Advisories",
@@ -416,6 +395,27 @@
         "Medium"
       ],
       "threat_overview": "The PHP team is pleased to announce a new beta release of PHP 8.6.0, Beta 2. This continues the PHP 8.6 release cycle, the rough outline of which is s",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Last Call for the State of PHP Survey",
+      "url": "https://www.php.net/index.php#2026-08-25-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-08-25",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The State of PHP survey is still open, but not for much longer. It asks how PHP is working for you: what you build with, what is painful, and what you",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

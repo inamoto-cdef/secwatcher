@@ -1,6 +1,27 @@
 {
-  "last_updated": "2026-11-07 10:42:02",
+  "last_updated": "2026-11-07 17:27:39",
   "items": [
+    {
+      "original_title": "Siemens製品に対するアップデート（2026年11月）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-06T18:35+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "更新：5件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-045512.html\">SSA-045512: Node2Shell Vulnerability in Siemens Products</a></",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
     {
       "original_title": "オラクルのOracle Purchasingにおけるクロスサイトリクエストフォージェリの脆弱性",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042401.html",
@@ -191,10 +212,10 @@
       ]
     },
     {
-      "original_title": "アップルのmacOSにおけるバッファエラーの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042392.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-06T13:20+09:00",
+      "original_title": "PHP 8.6.0 RC5 available for testing",
+      "url": "https://www.php.net/index.php#2026-11-05-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-11-05",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -202,10 +223,10 @@
         "CMS"
       ],
       "tags": [
-        "JVN (Japan Vulnerability Notes)",
+        "PHP Security Advisories",
         "Medium"
       ],
-      "threat_overview": "この問題はメモリ処理の改善によって対処されました。この問題はmacOS Golden Gate 27.2およびmacOS Tahoe 26.7.2で修正されています。アプリケーションが予期しないシステム終了を引き起こしたり、プロセスメモリを破損させる可能性があります。",
+      "threat_overview": "The PHP team is pleased to announce the fourth release candidate of PHP 8.6.0, RC5. This continues the PHP 8.6 release cycle, whose rough outline is s",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -395,27 +416,6 @@
         "Medium"
       ],
       "threat_overview": "The PHP team is pleased to announce a new beta release of PHP 8.6.0, Beta 2. This continues the PHP 8.6 release cycle, the rough outline of which is s",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Last Call for the State of PHP Survey",
-      "url": "https://www.php.net/index.php#2026-08-25-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-08-25",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The State of PHP survey is still open, but not for much longer. It asks how PHP is working for you: what you build with, what is painful, and what you",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

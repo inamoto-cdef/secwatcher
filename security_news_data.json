@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-10 12:15:53",
+  "last_updated": "2026-11-10 21:15:15",
   "items": [
     {
-      "original_title": "SS1／SS1クラウドおよびそのODM製品rocoeyesにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000169.html",
+      "original_title": "Siemens製品に対するアップデート（2026年11月）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T15:12+09:00",
+      "published": "2026-11-06T18:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "株式会社ディー・オー・エスが提供するIT資産管理ツールSS1／SS1クラウドおよび株式会社ロココが提供するrocoeyesには、次の複数の脆弱性が存在します。<ul><li>重要な情報のセキュアでない格納（CWE-922）- CVE-2026-109582</li><li>パストラバーサル（CWE-",
+      "threat_overview": "更新：6件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-045512.html\">SSA-045512: Node2Shell Vulnerability in Siemens Products</a></",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "WebSAM WinShareにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000163.html",
+      "original_title": "Zabbix agentにおけるDLL読み込みに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000124.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T14:24+09:00",
+      "published": "2026-08-28T12:03+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "日本電気株式会社が提供するWebSAM WinShareには、次の複数の脆弱性が存在します。\n<ul><li>プログラムフォルダにおけるインストール時の不適切なファイルアクセス権設定（CWE-276）- CVE-2026-113362</li><li>危険なメソッドや機能の意図しない公開（CWE-7",
+      "threat_overview": "Zabbix LLCが提供するZabbix agentは、次の脆弱性に起因して不正なDLLを読み込んでしまう可能性があります。\n<ul><li>インストール時の不適切なファイルアクセス権設定（CWE-276）- CVE-2026-59781</li></ul>\nこの脆弱性情報は、情報セキュリティ早期",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月05日）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042474.html",
+      "original_title": "Webtop Media Transcoderにおける異なる領域間での不適切なリソースの移動の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042611.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T13:34+09:00",
+      "published": "2026-11-10T14:55+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。\n\n更新：1件<ul><li><a href=\"https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-07\" target=",
+      "threat_overview": "オープンウェーブメッセージング株式会社が提供するWebtop Media Transcoderには、次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/669.html\" target=\"_blank\"></a><a href=\"h",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Effekseerにおける入力データ検証不備の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000168.html",
+      "original_title": "KUSANAGIにおけるHTTPヘッダーインジェクションの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042610.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T12:09+09:00",
+      "published": "2026-11-10T14:55+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Effekseerには、パーティクルエフェクトを編集するためのツールとエフェクトを再生するランタイムが含まれています。Effekseerランタイムは、ゲームクライアントや3DCGビューアなどに組み込んで使われることが想定されています。\nEffekseerの入力データ（「エフェクトファイル」）検証処理",
+      "threat_overview": "GMOプライム・ストラテジー株式会社が提供するKUSANAGIには、WordPress向けNginxの設定ファイルに含まれるリダイレクトルールに次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/113.html\" target=\"",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "アップルのmacOSにおける制御チャネルとデータチャネル間の安全でない非同期化に関わるハードウェアロジックに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042473.html",
+      "original_title": "DromaraのJpomにおけるユーザ制御の鍵による認証回避に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042609.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T10:36+09:00",
+      "published": "2026-11-10T14:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "追加のサンドボックス制限により権限の問題は解決されました。この問題は macOS Golden Gate 27.2、macOS Sequoia 15.8.2、macOS Tahoe 26.7.2 で修正されています。アプリが機密ユーザーデータにアクセスできる可能性がありましたが、現在は適切に対処され",
+      "threat_overview": "Jpom 2.11.12までには、SshFileControllerに認証回避の脆弱性が含まれており、認証されたワークスペースユーザーが他のワークスペースに属するSSHホストに対し、他のSSH資産IDを指定することでアクセスできてしまいます。任意のワークスペースでSSHファイルの権限を持つ攻撃者は、",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "IBMのIBM Cloud Pak Systemにおけるクロスサイトスクリプティングの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042472.html",
+      "original_title": "OpenBSDのOpenSSHにおける予期せぬステータスコードまたは戻り値に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042608.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T10:36+09:00",
+      "published": "2026-11-10T14:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "IBM Cloud Pak System 2.3.6.0および2.3.6.1にはクロスサイトスクリプティングの脆弱性があります。この脆弱性により、ユーザーは任意のJavaScriptコードをWeb UIに埋め込むことが可能となり、本来の機能が変更されるため、信頼されたセッション内で資格情報が漏洩する",
+      "threat_overview": "Linux上のOpenSSH 10.6p2より前のバージョンのsshdは、musl libcがPAMなしで使用される場合に、パスワード認証のバイパスに対する回避策を欠いています（これは、文字列がパスワードハッシュとして意図されているかどうかの誤解釈に関連しています）。特定のアカウント設定では、256",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのAndroidにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042471.html",
+      "original_title": "Debian等の複数ベンダの製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026285.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T10:36+09:00",
+      "published": "2026-11-10T14:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "複数の場所で、タップジャッキングやオーバーレイ攻撃によりユーザーを騙してAutofillの内容を漏洩させる可能性があります。これにより、追加の実行権限を必要とせずにローカルでの権限昇格が発生する可能性があります。攻撃を実行するためにユーザーの操作は不要です。",
+      "threat_overview": "問題の概要：パスワードベースの暗号化を使用して暗号化されたCMSメッセージを復号しようとするアプリケーションにおいて、範囲外の読み取りおよび書き込みが発生する可能性があります。影響の概要：この範囲外読み取りはアプリケーションをクラッシュさせ、サービス拒否（DoS）を引き起こす可能性があります。また、",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのAndroidにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042470.html",
+      "original_title": "OpenSSL Project等の複数ベンダの製品における秘密のタイミングチャネルに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026284.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T10:36+09:00",
+      "published": "2026-11-10T14:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "複数の場所でタップジャッキングやオーバーレイ攻撃によりユーザーを騙して権限を許可させる可能性があります。これにより、追加の実行権限を必要とせずにローカルで権限が昇格する可能性があります。この攻撃を悪用するにはユーザーの操作が必要です。",
+      "threat_overview": "問題の概要：64ビットARMプラットフォーム上のSM2アルゴリズム実装において、リモートで秘密鍵を回復される可能性があるタイミングサイドチャネルが存在します。影響の概要：64ビットARMプラットフォーム上のSM2署名計算におけるタイミングサイドチャネルにより、攻撃者が秘密鍵を回復できる可能性がありま",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GoogleのAndroidにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042469.html",
+      "original_title": "OpenSSL Project等の複数ベンダの製品における境界外読み取りに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026283.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T10:36+09:00",
+      "published": "2026-11-10T14:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "複数の箇所で、Androidユーザー間の分離が不十分なため、プライマリユーザーが他のフルユーザーのセキュアNFCを無効化できる可能性があります。これにより、追加の実行権限を必要とせずにローカルで権限を昇格させることが起こります。エクスプロイトにはユーザーの操作が不要です。",
+      "threat_overview": "問題の概要：OpenSSLのHTTPクライアントAPI関数を使用するアプリケーションにおいて、「no_proxy」環境変数が設定されており、HTTP URLの権限コンポーネントのホスト部分がIPv6アドレスである場合に、境界外読み取りが発生する可能性があります。影響の概要：境界外読み取りによりクラッ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Apache Software FoundationのApache Camelにおけるエラーメッセージによる情報漏えいに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042468.html",
+      "original_title": "GPUStackにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042607.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-09T10:36+09:00",
+      "published": "2026-11-10T14:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,70 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Apache CamelのCoAPコンポーネントにおける機密情報を含むエラーメッセージ生成の脆弱性について説明します。この問題は、Apache Camelのバージョン4.0.0から4.18.5未満、ならびに4.19.0から4.22.2未満のバージョンに影響を与えます。CoAPコンシューマがルート完了",
+      "threat_overview": "GPUStackは、AIモデルのサービングおよびGPUインスタンスのプロビジョニングのためのオープンソースのGPUクラスター管理ツールです。バージョン2.2.0より前のgpustack/api/auth.py内のget_current_user関数では、force_auth_localhostがデフ",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 RC5 available for testing",
+      "url": "https://www.php.net/index.php#2026-11-05-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-11-05",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the fourth release candidate of PHP 8.6.0, RC5. This continues the PHP 8.6 release cycle, whose rough outline is s",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Updated PHP Windows builds for Brotli security fix",
+      "url": "https://www.php.net/index.php#2026-10-26-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-10-26",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team announces updated Windows builds: PHP 8.5.12-1, 8.4.27-1, 8.3.36-1 and 8.2.35-1. These builds include Brotli 1.2.1, which fixes CVE-2026-",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Informational advisory: Session upload progress",
+      "url": "https://www.php.net/index.php#2026-10-23-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-10-23",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "We suggest you set session.upload_progress.enabled=0 until the next regular bugfix release, to fully protect from an unlikely RCE vector. This setting",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -227,6 +290,27 @@
         "Medium"
       ],
       "threat_overview": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongl",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 RC4 available for testing",
+      "url": "https://www.php.net/index.php#2026-10-21-6",
+      "source": "PHP Security Advisories",
+      "published": "2026-10-21",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the third release candidate of PHP 8.6.0, RC4. This continues the PHP 8.6 release cycle, whose rough outline is sp",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -268,7 +352,7 @@
         "PHP Security Advisories",
         "Medium"
       ],
-      "threat_overview": "The PHP team is pleased to announce the first release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is sp",
+      "threat_overview": "The PHP team is pleased to announce the second release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is s",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -332,90 +416,6 @@
         "Medium"
       ],
       "threat_overview": "The PHP team is pleased to announce a new beta release of PHP 8.6.0, Beta 2. This continues the PHP 8.6 release cycle, the rough outline of which is s",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Last Call for the State of PHP Survey",
-      "url": "https://www.php.net/index.php#2026-08-25-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-08-25",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The State of PHP survey is still open, but not for much longer. It asks how PHP is working for you: what you build with, what is painful, and what you",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 Beta 1 is available for testing",
-      "url": "https://www.php.net/index.php#2026-08-13-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-08-13",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the first beta release of PHP 8.6.0, Beta 1. This continues the PHP 8.6 release cycle, the rough outline of which ",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 Alpha 3 available for testing",
-      "url": "https://www.php.net/index.php#2026-07-30-3",
-      "source": "PHP Security Advisories",
-      "published": "2026-07-30",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the second testing release of PHP 8.6.0, Alpha 3. This continues the PHP 8.6 release cycle, the rough outline of w",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 Alpha 2 available for testing",
-      "url": "https://www.php.net/index.php#2026-07-16-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-07-16",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the second testing release of PHP 8.6.0, Alpha 2. This continues the PHP 8.6 release cycle, the rough outline of w",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

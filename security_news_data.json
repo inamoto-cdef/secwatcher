@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-11 10:04:48",
+  "last_updated": "2026-11-11 17:57:18",
   "items": [
     {
-      "original_title": "Siemens製品に対するアップデート（2026年11月）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
+      "original_title": "Airbyteにおける任意のコードが実行可能な脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000166.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-06T18:35+09:00",
+      "published": "2026-11-04T12:16+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "更新：6件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-045512.html\">SSA-045512: Node2Shell Vulnerability in Siemens Products</a></",
+      "threat_overview": "Airbyteには次の脆弱性が存在します。<ul><li>安全ではないリフレクション（CWE-470）</li></ul>なお、本脆弱性の悪用が確認されています。\nこの脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方が開発者とIPAに報告し、JPCERT/CCが開発者と公表の調",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Zabbix agentにおけるDLL読み込みに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000124.html",
+      "original_title": "PrestaShopのPerformance DebugモードにおけるPHPコードインジェクションの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043086.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-08-28T12:03+09:00",
+      "published": "2026-11-11T15:08+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Zabbix LLCが提供するZabbix agentは、次の脆弱性に起因して不正なDLLを読み込んでしまう可能性があります。\n<ul><li>インストール時の不適切なファイルアクセス権設定（CWE-276）- CVE-2026-59781</li></ul>\nこの脆弱性情報は、情報セキュリティ早期",
+      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/385711\" target=\"_blank\">Vulnerability Note VU#385711 PrestaShop Performance Debug Configuration Contains ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Webtop Media Transcoderにおける異なる領域間での不適切なリソースの移動の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042611.html",
+      "original_title": "FrodoBots EarthRover Mini+における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043085.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:55+09:00",
+      "published": "2026-11-11T15:08+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "オープンウェーブメッセージング株式会社が提供するWebtop Media Transcoderには、次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/669.html\" target=\"_blank\"></a><a href=\"h",
+      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/188754\" target=\"_blank\">Vulnerability Note VU#188754 FrodoBots EarthRover Mini+ firmware contains multipl",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "KUSANAGIにおけるHTTPヘッダーインジェクションの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042610.html",
+      "original_title": "シスコシステムズのCisco BroadWorks Application Delivery Platform等の複数製品におけるXML 外部エンティティの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043084.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:55+09:00",
+      "published": "2026-11-11T14:12+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "GMOプライム・ストラテジー株式会社が提供するKUSANAGIには、WordPress向けNginxの設定ファイルに含まれるリダイレクトルールに次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/113.html\" target=\"",
+      "threat_overview": "Cisco BroadWorksのOpen Client Interface（OCI）XMLパーサに脆弱性が存在し、認証されていないリモートの攻撃者が影響を受けるシステム上の機密設定情報を読み取る可能性があります。この脆弱性は、外部エンティティの解決がデフォルトで許可されていることによりXMLエント",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "DromaraのJpomにおけるユーザ制御の鍵による認証回避に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042609.html",
+      "original_title": "アドビのAdobe Bridgeにおける境界外書き込みに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043083.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:53+09:00",
+      "published": "2026-11-11T14:12+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Jpom 2.11.12までには、SshFileControllerに認証回避の脆弱性が含まれており、認証されたワークスペースユーザーが他のワークスペースに属するSSHホストに対し、他のSSH資産IDを指定することでアクセスできてしまいます。任意のワークスペースでSSHファイルの権限を持つ攻撃者は、",
+      "threat_overview": "Bridge は、現在のユーザーのコンテキストで任意のコードを実行させる可能性のある境界外書き込みの脆弱性の影響を受けています。この問題を悪用するためには、被害者が悪意のあるファイルを開くというユーザーの操作が必要です。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "OpenBSDのOpenSSHにおける予期せぬステータスコードまたは戻り値に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042608.html",
+      "original_title": "SuiteCRMにおけるコードインジェクションの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043082.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:53+09:00",
+      "published": "2026-11-11T14:12+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Linux上のOpenSSH 10.6p2より前のバージョンのsshdは、musl libcがPAMなしで使用される場合に、パスワード認証のバイパスに対する回避策を欠いています（これは、文字列がパスワードハッシュとして意図されているかどうかの誤解釈に関連しています）。特定のアカウント設定では、256",
+      "threat_overview": "SuiteCRMは、オープンソースでエンタープライズ対応の顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2以前では、Studio Dropdown Editorが$dropdown_nameをhtml_entity_decode()によって処理し、その",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Debian等の複数ベンダの製品における複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026285.html",
+      "original_title": "SuiteCRMにおけるSQL インジェクションの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043081.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:53+09:00",
+      "published": "2026-11-11T14:12+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "問題の概要：パスワードベースの暗号化を使用して暗号化されたCMSメッセージを復号しようとするアプリケーションにおいて、範囲外の読み取りおよび書き込みが発生する可能性があります。影響の概要：この範囲外読み取りはアプリケーションをクラッシュさせ、サービス拒否（DoS）を引き起こす可能性があります。また、",
+      "threat_overview": "SuiteCRMはオープンソースの企業向け顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2以前では、Project Templateモジュールのaction_get_end_date関数が認証済みの呼び出し元によって制御されるtask_idおよびlag",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "OpenSSL Project等の複数ベンダの製品における秘密のタイミングチャネルに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026284.html",
+      "original_title": "SuiteCRMにおける認証の欠如に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043080.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:53+09:00",
+      "published": "2026-11-11T14:12+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "問題の概要：64ビットARMプラットフォーム上のSM2アルゴリズム実装において、リモートで秘密鍵を回復される可能性があるタイミングサイドチャネルが存在します。影響の概要：64ビットARMプラットフォーム上のSM2署名計算におけるタイミングサイドチャネルにより、攻撃者が秘密鍵を回復できる可能性がありま",
+      "threat_overview": "SuiteCRMはオープンソースでエンタープライズ対応の顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2以前では、V8 APIのリレーションシップ書き込みパスが関連レコードの両方に対してオブジェクトレベルの編集および閲覧権限を一貫して強制していませんで",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "OpenSSL Project等の複数ベンダの製品における境界外読み取りに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026283.html",
+      "original_title": "SuiteCRMにおける動的に決定されたオブジェクト属性の不適切に制御された変更に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043079.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:53+09:00",
+      "published": "2026-11-11T14:12+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "問題の概要：OpenSSLのHTTPクライアントAPI関数を使用するアプリケーションにおいて、「no_proxy」環境変数が設定されており、HTTP URLの権限コンポーネントのホスト部分がIPv6アドレスである場合に、境界外読み取りが発生する可能性があります。影響の概要：境界外読み取りによりクラッ",
+      "threat_overview": "SuiteCRMはオープンソースの企業向け顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2より前のV8書き込みパスは、フィールドの存在を確認しますが、読み取り時に同じフィールドを隠すapi-visibleやsensitiveのメタデータを強制しません。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "GPUStackにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042607.html",
+      "original_title": "SuiteCRMにおけるリクエストに対するレスポンス内容の違いに起因する情報漏えいに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043078.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:53+09:00",
+      "published": "2026-11-11T14:11+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,217 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "GPUStackは、AIモデルのサービングおよびGPUインスタンスのプロビジョニングのためのオープンソースのGPUクラスター管理ツールです。バージョン2.2.0より前のgpustack/api/auth.py内のget_current_user関数では、force_auth_localhostがデフ",
+      "threat_overview": "SuiteCRMは、オープンソースの企業向け顧客関係管理（CRM）ソフトウェアアプリケーションです。7.15.2および8.10.2以前のバージョンでは、/legacy/Api/V8/OAuth2のパスワードグラントエンドポイントが、無効なユーザー名と無効なパスワードに対して異なるエラーメッセージを返",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Tue, 10 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p>CISA has added six new vulnerabilities to its <a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">Known Exploited Vulnerabilitie",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Mon, 09 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<div class=\"OutlineElement Ltr SCXW266414493 BCX8\">\n<p>CISA has added four new vulnerabilities to its <a href=\"https://www.cisa.gov/known-exploited-vu",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Fri, 06 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p>CISA has added one new vulnerability to its&nbsp;<a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">Known Exploited Vulnerabili",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Post-Quantum Questions to Ask Your Vendors",
+      "url": "https://www.cisa.gov/resources-tools/resources/post-quantum-questions-ask-your-vendors",
+      "source": "CISA KEV Catalog",
+      "published": "Thu, 05 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p>CISA, the Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC) and the National Security Agency (NSA) released joint guid",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "US Government Partners Urge Hardening Industrial Refrigeration and Cold Chain Monitoring Systems",
+      "url": "https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems",
+      "source": "CISA KEV Catalog",
+      "published": "Thu, 05 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<h2><strong>Overview</strong></h2>\n<p>The Cybersecurity and Infrastructure Security Agency (CISA), Federal Bureau of Investigation (FBI), Health and H",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Wed, 04 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p>CISA has added one new vulnerability to its&nbsp;<a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">Known Exploited Vulnerabili",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Tue, 03 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p>CISA has added one new vulnerability to its&nbsp;<a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">Known Exploited Vulnerabili",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Subnet Solutions PowerSYSTEM Center",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01",
+      "source": "CISA KEV Catalog",
+      "published": "Tue, 03 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-307-01.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Fri, 30 Oct 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p>CISA has added two new vulnerabilities to its <a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\">Known Exploited Vulnerabilitie",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Hitachi Energy TRO600 series products",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
+      "source": "CISA KEV Catalog",
+      "published": "Thu, 29 Oct 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-302-02.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

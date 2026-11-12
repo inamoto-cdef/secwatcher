@@ -1,6 +1,111 @@
 {
-  "last_updated": "2026-11-12 08:25:30",
+  "last_updated": "2026-11-12 15:09:03",
   "items": [
+    {
+      "original_title": "PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039073.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-10-23T18:45+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "The PHP Groupから、PHPの2件の脆弱性（CVE-2026-109618、CVE-2026-109619）に対してアドバイザリが公開されました。<ul><li><a href=\"https://github.com/php/php-src/security/advisories/GHSA",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Siemens製品に対するアップデート（2026年11月）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-06T18:35+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "新規：9件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fema",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Sleipnir Mobile for iPhone / iPadにおける不適切な証明書検証の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043089.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-12T11:55+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "フェンリル株式会社が提供するSleipnir Mobile for iPhone / iPadおよびSleipnir Mobile for iPhone / iPad Black Editionには、次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/de",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "OpenSSLにおける脆弱性に対するアップデート（2026年11月10日）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043088.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-12T11:55+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "OpenSSL ProjectからOpenSSL Security Advisory [10th November 2026]が公開されました。\n<ul><li><a href=\"https://openssl-library.org/news/secadv/20261110.txt\" target",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Intel製品に対するアップデート（2026年11月）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043087.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-12T11:55+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "<ul><li><a href=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01440.html\" target=\"_blank\">INTEL-SA-01440: Intel&#174; Gra",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
     {
       "original_title": "Airbyteにおける任意のコードが実行可能な脆弱性",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000166.html",
@@ -101,111 +206,6 @@
         "Medium"
       ],
       "threat_overview": "Bridge は、現在のユーザーのコンテキストで任意のコードを実行させる可能性のある境界外書き込みの脆弱性の影響を受けています。この問題を悪用するためには、被害者が悪意のあるファイルを開くというユーザーの操作が必要です。",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "SuiteCRMにおけるコードインジェクションの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043082.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:12+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "SuiteCRMは、オープンソースでエンタープライズ対応の顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2以前では、Studio Dropdown Editorが$dropdown_nameをhtml_entity_decode()によって処理し、その",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "SuiteCRMにおけるSQL インジェクションの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043081.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:12+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "SuiteCRMはオープンソースの企業向け顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2以前では、Project Templateモジュールのaction_get_end_date関数が認証済みの呼び出し元によって制御されるtask_idおよびlag",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "SuiteCRMにおける認証の欠如に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043080.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:12+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "SuiteCRMはオープンソースでエンタープライズ対応の顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2以前では、V8 APIのリレーションシップ書き込みパスが関連レコードの両方に対してオブジェクトレベルの編集および閲覧権限を一貫して強制していませんで",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "SuiteCRMにおける動的に決定されたオブジェクト属性の不適切に制御された変更に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043079.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:12+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "SuiteCRMはオープンソースの企業向け顧客関係管理（CRM）ソフトウェアアプリケーションです。バージョン7.15.2および8.10.2より前のV8書き込みパスは、フィールドの存在を確認しますが、読み取り時に同じフィールドを隠すapi-visibleやsensitiveのメタデータを強制しません。",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "SuiteCRMにおけるリクエストに対するレスポンス内容の違いに起因する情報漏えいに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043078.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:11+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "SuiteCRMは、オープンソースの企業向け顧客関係管理（CRM）ソフトウェアアプリケーションです。7.15.2および8.10.2以前のバージョンでは、/legacy/Api/V8/OAuth2のパスワードグラントエンドポイントが、無効なユーザー名と無効なパスワードに対して異なるエラーメッセージを返",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

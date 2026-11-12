@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-12 15:09:03",
+  "last_updated": "2026-11-13 00:50:09",
   "items": [
     {
-      "original_title": "PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039073.html",
+      "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043156.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-10-23T18:45+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "The PHP Groupから、PHPの2件の脆弱性（CVE-2026-109618、CVE-2026-109619）に対してアドバイザリが公開されました。<ul><li><a href=\"https://github.com/php/php-src/security/advisories/GHSA",
+      "threat_overview": "Oracle CommunicationsのOracle Communications Billing and Revenue Management製品における脆弱性（コンポーネント：BRMサーバー）について説明します。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Siemens製品に対するアップデート（2026年11月）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
+      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043155.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-06T18:35+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "新規：9件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fema",
+      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：Cloud native deployment）に脆弱性があります。影響を受けるサポート対象バージョンは15.0.0.0.0、15.",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Sleipnir Mobile for iPhone / iPadにおける不適切な証明書検証の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043089.html",
+      "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043154.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T11:55+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "フェンリル株式会社が提供するSleipnir Mobile for iPhone / iPadおよびSleipnir Mobile for iPhone / iPad Black Editionには、次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/de",
+      "threat_overview": "Oracle CommunicationsのOracle Communications Billing and Revenue Management製品（コンポーネント：BRMサーバー）における脆弱性です。影響を受けるサポート対象のバージョンは15.0.0.0.0、15.0.1.0.0、15.1.0",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "OpenSSLにおける脆弱性に対するアップデート（2026年11月10日）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043088.html",
+      "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043153.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T11:55+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "OpenSSL ProjectからOpenSSL Security Advisory [10th November 2026]が公開されました。\n<ul><li><a href=\"https://openssl-library.org/news/secadv/20261110.txt\" target",
+      "threat_overview": "Oracle CommunicationsのOracle Communications Billing and Revenue Management製品（コンポーネント: BRMサーバー）における脆弱性です。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Intel製品に対するアップデート（2026年11月）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043087.html",
+      "original_title": "オラクルのOracle Applications Managerにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043152.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T11:55+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01440.html\" target=\"_blank\">INTEL-SA-01440: Intel&#174; Gra",
+      "threat_overview": "Oracle E-Business SuiteのOracle Applications Manager製品（コンポーネント：Oracle Diagnostics Interfaces）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。HTTP経",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Airbyteにおける任意のコードが実行可能な脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000166.html",
+      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043151.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-04T12:16+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Airbyteには次の脆弱性が存在します。<ul><li>安全ではないリフレクション（CWE-470）</li></ul>なお、本脆弱性の悪用が確認されています。\nこの脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方が開発者とIPAに報告し、JPCERT/CCが開発者と公表の調",
+      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：セキュリティ）に脆弱性が存在します。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0.0",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "PrestaShopのPerformance DebugモードにおけるPHPコードインジェクションの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043086.html",
+      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043150.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T15:08+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/385711\" target=\"_blank\">Vulnerability Note VU#385711 PrestaShop Performance Debug Configuration Contains ",
+      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：セキュリティ）に脆弱性があります。影響を受けるサポート対象バージョンは15.2.0.0.0です。TLS経由でネットワークアクセスが可",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "FrodoBots EarthRover Mini+における複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043085.html",
+      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043149.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T15:08+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/188754\" target=\"_blank\">Vulnerability Note VU#188754 FrodoBots EarthRover Mini+ firmware contains multipl",
+      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：セキュリティ）には脆弱性があります。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0.0",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "シスコシステムズのCisco BroadWorks Application Delivery Platform等の複数製品におけるXML 外部エンティティの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043084.html",
+      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043148.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:12+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Cisco BroadWorksのOpen Client Interface（OCI）XMLパーサに脆弱性が存在し、認証されていないリモートの攻撃者が影響を受けるシステム上の機密設定情報を読み取る可能性があります。この脆弱性は、外部エンティティの解決がデフォルトで許可されていることによりXMLエント",
+      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：Core）における脆弱性です。影響を受けるサポート対象バージョンは、15.0.0.0.0、15.0.1.0.0、15.1.0.0.0",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "アドビのAdobe Bridgeにおける境界外書き込みに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043083.html",
+      "original_title": "オラクルのOracle Applications Managerにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043147.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-11T14:12+09:00",
+      "published": "2026-11-12T13:10+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Bridge は、現在のユーザーのコンテキストで任意のコードを実行させる可能性のある境界外書き込みの脆弱性の影響を受けています。この問題を悪用するためには、被害者が悪意のあるファイルを開くというユーザーの操作が必要です。",
+      "threat_overview": "Oracle E-Business SuiteのOracle Applications Manager製品（コンポーネント：Diagnostics）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。悪用が困難な脆弱性であり、HTTP経由でネットワークアク",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

@@ -1,6 +1,69 @@
 {
-  "last_updated": "2026-11-13 07:06:45",
+  "last_updated": "2026-11-13 12:13:15",
   "items": [
+    {
+      "original_title": "バラクーダネットワークスのemail security gateway 300 ファームウェア等の複数製品におけるOS コマンドインジェクションの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043159.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-13T11:59+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "特定のBarracudaアプライアンス製品において、共通のBarracudaコードを使用したタイムゾーン設定フィールド内のシェルメタ文字が不適切に無害化されるため、認証された管理者が細工されたタイムゾーン値を後に処理する際に、root権限で実行されるOSコマンドを注入できます。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "バラクーダネットワークスのemail security gateway 300 ファームウェア等の複数製品における代替パスまたはチャネルを使用した認証回避に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043158.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-13T11:59+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Barracuda Email Security Gatewayのバージョン9.4.0.030より前のバージョンに存在する認証バイパスの脆弱性により、認証されていないリモート攻撃者が設定インポート機能を呼び出し、細工された互換性のあるバックアップアーカイブを復元できるようになっています。その結果、ア",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Progress Software Corporationのtelerik document processing librariesにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043157.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-13T11:59+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "バージョン2026.3.1027以前のIn Progress Telerik Document Processing Librariesにおいて、RadWordsProcessingの制御されていない再帰、不効率なアルゴリズムの複雑性、および無限ループの脆弱性により、認証されていない攻撃者が細工され",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
     {
       "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおけるアクセス制御に関する脆弱性",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043156.html",
@@ -143,69 +206,6 @@
         "Medium"
       ],
       "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：セキュリティ）に脆弱性があります。影響を受けるサポート対象バージョンは15.2.0.0.0です。TLS経由でネットワークアクセスが可",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043149.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T13:10+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：セキュリティ）には脆弱性があります。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0.0",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle Communications Billing And Revenue Management Elastic Charging Engineにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043148.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T13:10+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle CommunicationsのOracle Communications BRM - Elastic Charging Engine製品（コンポーネント：Core）における脆弱性です。影響を受けるサポート対象バージョンは、15.0.0.0.0、15.0.1.0.0、15.1.0.0.0",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle Applications Managerにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043147.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T13:10+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle E-Business SuiteのOracle Applications Manager製品（コンポーネント：Diagnostics）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。悪用が困難な脆弱性であり、HTTP経由でネットワークアク",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

@@ -1,6 +1,111 @@
 {
-  "last_updated": "2026-11-16 14:15:27",
+  "last_updated": "2026-11-17 00:04:22",
   "items": [
+    {
+      "original_title": "ComfyUIのComfyUI-Easy-Use拡張機能における認証不要のパストラバーサルの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043498.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-16T14:22+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/944667\" target=\"_blank\">Vulnerability Note VU#944667 ComfyUI-Easy-Use contains unauthenticated path trave",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "TightVNCおよびUltraVNCのWindows Viewerにおけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043497.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-16T14:22+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/644655\" target=\"_blank\">Vulnerability Note VU#644655 TightVNC and UltraVNC Viewer contains a heap-based b",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月12日）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043496.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-16T14:22+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。\n\n新規：5件<ul><li><a href=\"https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01\" target=",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PromZardにおけるリモートコード実行の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043495.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-16T14:22+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/685399\" target=\"_blank\">Vulnerability Note VU#685399 PromZard context key code injection leads to remote ",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "ImageMagickを利用したアプリケーションにおける任意ファイル読み書きの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043494.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-16T14:22+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/580079\" target=\"_blank\">Vulnerability Note VU#580079 Arbitrary file read/write vulnerability in ImageMagi",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
     {
       "original_title": "Dlibにおけるゼロ除算に関する脆弱性",
       "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026286.html",
@@ -101,111 +206,6 @@
         "Medium"
       ],
       "threat_overview": "Oracle E-Business SuiteのOracle EDI Gateway製品（コンポーネント：EDI）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTP経由のネットワークアクセスを持つ権限の低い攻撃者が容易に悪用できる脆弱性によって、",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043489.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:32+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle E-Business SuiteのOracle Sales Foundation製品（コンポーネント：Security API）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。悪用は困難な脆弱性であり、HTTP経由のネットワークアクセスを",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのCost Managementにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043488.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:31+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle E-Business SuiteのOracle Cost Management製品（コンポーネント: コストメンテナンス）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。悪用は困難な脆弱性であり、ネットワーク経由のHTTPアクセ",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043487.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:31+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle E-Business Suite の Oracle Materials Requirement Planning 製品（コンポーネント：内部操作）に脆弱性があります。影響を受けるサポート対象バージョンは 12.2.3 から 12.2.15 です。この脆弱性は悪用が困難であり、HTTP ",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle Application Object Libraryにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043486.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:31+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle E-Business SuiteのOracle Application Object Library製品における脆弱性（コンポーネント：Flexfields）について説明します。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。この脆弱性は悪用が困難ですが、HTT",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle Application Object Libraryにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043485.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:31+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle E-Business SuiteのOracle Application Object Library製品（コンポーネント：DB Privileges）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は、Oracle Appli",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

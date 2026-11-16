@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-16 08:49:56",
+  "last_updated": "2026-11-16 14:15:27",
   "items": [
     {
-      "original_title": "Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2026年11月11日）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043360.html",
+      "original_title": "Dlibにおけるゼロ除算に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026286.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T14:02+09:00",
+      "published": "2026-11-16T11:32+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://httpd.apache.org/security/vulnerabilities_24.html#2.4.71\" target=\"_blank\">Fixed in Apache HTTP Server 2.4.71</a></li></ul>",
+      "threat_overview": "davisking dlib のゼロ除算の脆弱性により、リモートの攻撃者が細工されたファイルを介してサービス拒否攻撃を引き起こす可能性があります。本問題は dlib バージョン 19.24.7 未満に影響を及ぼします。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "三菱電機数値制御装置におけるサービス運用妨害（DoS）の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-006718.html",
+      "original_title": "Apache Software Foundation等の複数ベンダの製品における競合状態に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043493.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-03-11T18:08+09:00",
+      "published": "2026-11-16T11:32+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "三菱電機数値制御装置（CNC）には、入力値インデックス、位置、またはオフセットの不適切な検証に起因するサービス運用妨害（DoS）の脆弱性が存在します（CWE-1285、CVE-2025-2399）。\n\nこの脆弱性情報は、製品利用者への周知を目的に、開発者がJPCERT/CCに報告し、JPCERT/C",
+      "threat_overview": "Apache HTTP Serverのmod_http2のassign_headers()における不適切な同期によって共有リソースを用いた並行実行に脆弱性が存在し、これがリモートコード実行（RCE）につながる可能性があります。この問題は、Apache HTTP Serverのバージョン2.4.55か",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039915.html",
+      "original_title": "Dlibにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043492.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-10-27T13:38+09:00",
+      "published": "2026-11-16T11:32+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Googleのデータ圧縮アルゴリズムBrotliのC言語実装における脆弱性（CVE-2026-111497）に対するアドバイザリが公開されました。\n\n本脆弱性は「HTTP2Shell」や「Node2Shell」とも呼ばれています。<ul><li><a href=\"https://github.com",
+      "threat_overview": "davisking dlib（dlib/external/zlib モジュール）において、入力サイズをチェックせずにバッファをコピーする（いわゆるクラシックなバッファオーバーフロー）が原因で境界外書き込みが発生する脆弱性があります。この脆弱性はプログラムファイル inflate.C に関連しています",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "KUSANAGIにおけるHTTPヘッダーインジェクションの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042610.html",
+      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043491.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-10T14:55+09:00",
+      "published": "2026-11-16T11:32+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "GMOプライム・ストラテジー株式会社が提供するKUSANAGIには、WordPress向けNginxの設定ファイルに含まれるリダイレクトルールに次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/113.html\" target=\"",
+      "threat_overview": "Oracle E-Business SuiteのOracle EDI Gateway製品（コンポーネント：全般的なEDI問題）には脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は悪用が困難ですが、高い特権を持つ攻撃者がHTTPを介してネット",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "JetBrains製YouTrackにおけるクロスサイトスクリプティングの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000173.html",
+      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043490.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T12:19+09:00",
+      "published": "2026-11-16T11:32+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "JetBrains s.r.o.が提供するYouTrackには、次の脆弱性が存在します。\n<ul><li>クロスサイトスクリプティング（CWE-79）- CVE-2026-75048</li></ul>\nこの脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告しました",
+      "threat_overview": "Oracle E-Business SuiteのOracle EDI Gateway製品（コンポーネント：EDI）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTP経由のネットワークアクセスを持つ権限の低い攻撃者が容易に悪用できる脆弱性によって、",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Progress Software Corporationのtelerik document processing librariesにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043359.html",
+      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043489.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T12:10+09:00",
+      "published": "2026-11-16T11:32+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "In Progress Telerik Document Processing Librariesのバージョン2026.3.1027より前のバージョンにおいて、RadPdfProcessingおよびAIドキュメント要約・質問応答機能に、制御されていない再帰、無限ループ、非効率なアルゴリズムの複雑性お",
+      "threat_overview": "Oracle E-Business SuiteのOracle Sales Foundation製品（コンポーネント：Security API）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。悪用は困難な脆弱性であり、HTTP経由のネットワークアクセスを",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Progress Software Corporationのtelerik document processing librariesにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043358.html",
+      "original_title": "オラクルのCost Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043488.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T12:10+09:00",
+      "published": "2026-11-16T11:31+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "バージョン2026.3.1027より前のIn Progress Telerik Document Processing Librariesにおいて、RadSpreadProcessingおよびRadSpreadStreamProcessingに制御されていない再帰、無限ループ、未チェックのループ条件",
+      "threat_overview": "Oracle E-Business SuiteのOracle Cost Management製品（コンポーネント: コストメンテナンス）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。悪用は困難な脆弱性であり、ネットワーク経由のHTTPアクセ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Progress Software Corporationのtelerik document processing librariesにおけるパストラバーサルの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043357.html",
+      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043487.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T12:10+09:00",
+      "published": "2026-11-16T11:31+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "2026年3月10日27日以前のIn Progress Telerik Document Processing Librariesにおいて、ConvertおよびMerge AIエージェントツールにパストラバーサルの脆弱性が存在しています。認証された低権限の攻撃者がツールの引数を指定できる場合、構成さ",
+      "threat_overview": "Oracle E-Business Suite の Oracle Materials Requirement Planning 製品（コンポーネント：内部操作）に脆弱性があります。影響を受けるサポート対象バージョンは 12.2.3 から 12.2.15 です。この脆弱性は悪用が困難であり、HTTP ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Progress Software Corporationのtelerik document processing librariesにおけるXML 外部エンティティの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043356.html",
+      "original_title": "オラクルのOracle Application Object Libraryにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043486.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T12:10+09:00",
+      "published": "2026-11-16T11:31+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "2026年3月10日27日より前のIn Progress Telerik Document Processing Librariesにおいて、SVG画像処理のXML外部エンティティ参照の脆弱性により、認証されていない攻撃者がネストされた埋め込みSVGを含む細工されたSVG画像を通じて、画像が処理され",
+      "threat_overview": "Oracle E-Business SuiteのOracle Application Object Library製品における脆弱性（コンポーネント：Flexfields）について説明します。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。この脆弱性は悪用が困難ですが、HTT",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "LinuxのLinux Kernelにおける解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043355.html",
+      "original_title": "オラクルのOracle Application Object Libraryにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043485.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-13T12:10+09:00",
+      "published": "2026-11-16T11:31+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Linuxカーネルにおいて、以下の脆弱性が修正されました。sctp: DEL-IP処理時にASCONF自身のトランスポートを解放しない問題です。sctp_process_asconf()は、ASCONFチャンクが処理されるトランスポートをasconf-＞transport（chunk-＞transp",
+      "threat_overview": "Oracle E-Business SuiteのOracle Application Object Library製品（コンポーネント：DB Privileges）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は、Oracle Appli",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

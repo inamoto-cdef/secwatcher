@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-17 09:00:46",
+  "last_updated": "2026-11-17 17:52:39",
   "items": [
     {
-      "original_title": "ComfyUIのComfyUI-Easy-Use拡張機能における認証不要のパストラバーサルの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043498.html",
+      "original_title": "プリザンターにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000174.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T14:22+09:00",
+      "published": "2026-11-17T15:16+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/944667\" target=\"_blank\">Vulnerability Note VU#944667 ComfyUI-Easy-Use contains unauthenticated path trave",
+      "threat_overview": "株式会社インプリムが提供するプリザンターには、次の複数の脆弱性が存在します。\n<ul><li>情報公開機能における不適切な権限チェック（CWE-863）- CVE-2026-117634</li><li>APIにおけるパストラバーサル（CWE-22）- CVE-2026-121811</li><li",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "TightVNCおよびUltraVNCのWindows Viewerにおけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043497.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043765.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T14:22+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/644655\" target=\"_blank\">Vulnerability Note VU#644655 TightVNC and UltraVNC Viewer contains a heap-based b",
+      "threat_overview": "Microsoft Office Wordにおける境界外読み取りの脆弱性により、不正な攻撃者がネットワーク越しにコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月12日）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043496.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における二重解放に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043764.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T14:22+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。\n\n新規：5件<ul><li><a href=\"https://www.cisa.gov/news-events/ics-advisories/icsa-26-316-01\" target=",
+      "threat_overview": "Microsoft Office Wordのダブルフリーの脆弱性により、不正な攻撃者がネットワーク越しにコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "PromZardにおけるリモートコード実行の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043495.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043763.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T14:22+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/685399\" target=\"_blank\">Vulnerability Note VU#685399 PromZard context key code injection leads to remote ",
+      "threat_overview": "Microsoft Office Word におけるスタックベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "ImageMagickを利用したアプリケーションにおける任意ファイル読み書きの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043494.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043762.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T14:22+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "<ul><li><a href=\"https://kb.cert.org/vuls/id/580079\" target=\"_blank\">Vulnerability Note VU#580079 Arbitrary file read/write vulnerability in ImageMagi",
+      "threat_overview": "Microsoft Office Wordのオフバイワンエラーにより、権限のない攻撃者がネットワーク経由で情報を漏洩させる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Dlibにおけるゼロ除算に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2025/JVNDB-2025-026286.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043761.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:32+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "davisking dlib のゼロ除算の脆弱性により、リモートの攻撃者が細工されたファイルを介してサービス拒否攻撃を引き起こす可能性があります。本問題は dlib バージョン 19.24.7 未満に影響を及ぼします。",
+      "threat_overview": "Microsoft Office WordにおけるUse after freeの脆弱性により、不正な攻撃者がネットワーク経由で任意のコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Apache Software Foundation等の複数ベンダの製品における競合状態に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043493.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043760.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:32+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Apache HTTP Serverのmod_http2のassign_headers()における不適切な同期によって共有リソースを用いた並行実行に脆弱性が存在し、これがリモートコード実行（RCE）につながる可能性があります。この問題は、Apache HTTP Serverのバージョン2.4.55か",
+      "threat_overview": "Microsoft Office Wordのヒープベースのバッファオーバーフローにより、認証されていない攻撃者がネットワーク経由でコードを実行する可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Dlibにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043492.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043759.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:32+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "davisking dlib（dlib/external/zlib モジュール）において、入力サイズをチェックせずにバッファをコピーする（いわゆるクラシックなバッファオーバーフロー）が原因で境界外書き込みが発生する脆弱性があります。この脆弱性はプログラムファイル inflate.C に関連しています",
+      "threat_overview": "Microsoft Office Word におけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がローカルでコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043491.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043758.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:32+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Oracle E-Business SuiteのOracle EDI Gateway製品（コンポーネント：全般的なEDI問題）には脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は悪用が困難ですが、高い特権を持つ攻撃者がHTTPを介してネット",
+      "threat_overview": "Microsoft Office Wordのヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性がある問題です。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "オラクルのOracle E-Business Suiteにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043490.html",
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043757.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-16T11:32+09:00",
+      "published": "2026-11-17T13:28+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Oracle E-Business SuiteのOracle EDI Gateway製品（コンポーネント：EDI）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTP経由のネットワークアクセスを持つ権限の低い攻撃者が容易に悪用できる脆弱性によって、",
+      "threat_overview": "Microsoft Office Word における数値型間の不適切な変換により、未承認の攻撃者がネットワーク上で情報を漏洩させることが可能になります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -422,90 +422,6 @@
       ]
     },
     {
-      "original_title": "PHP 8.6.0RC7 available for testing",
-      "url": "https://www.php.net/index.php#2026-11-12-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-11-12",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the fifth release candidate of PHP 8.6.0, RC7. This continues the PHP 8.6 release cycle, whose rough outline is sp",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 RC5 available for testing",
-      "url": "https://www.php.net/index.php#2026-11-05-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-11-05",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the fourth release candidate of PHP 8.6.0, RC5. This continues the PHP 8.6 release cycle, whose rough outline is s",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Updated PHP Windows builds for Brotli security fix",
-      "url": "https://www.php.net/index.php#2026-10-26-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-10-26",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team announces updated Windows builds: PHP 8.5.12-1, 8.4.27-1, 8.3.36-1 and 8.2.35-1. These builds include Brotli 1.2.1, which fixes CVE-2026-",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Informational advisory: Session upload progress",
-      "url": "https://www.php.net/index.php#2026-10-23-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-10-23",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "We suggest you set session.upload_progress.enabled=0 until the next regular bugfix release, to fully protect from an unlikely RCE vector. This setting",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
       "original_title": "Security advisory: Critical remote code execution vulnerabilities, update now",
       "url": "https://www.php.net/index.php#2026-10-21-5",
       "source": "PHP Security Advisories",
@@ -521,27 +437,6 @@
         "Medium"
       ],
       "threat_overview": "PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 fix two critical vulnerabilities that can allow unauthenticated remote code execution. All PHP users are strongl",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 RC4 available for testing",
-      "url": "https://www.php.net/index.php#2026-10-21-6",
-      "source": "PHP Security Advisories",
-      "published": "2026-10-21",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the third release candidate of PHP 8.6.0, RC4. This continues the PHP 8.6 release cycle, whose rough outline is sp",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -583,7 +478,7 @@
         "PHP Security Advisories",
         "Medium"
       ],
-      "threat_overview": "The PHP team is pleased to announce the second release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is s",
+      "threat_overview": "The PHP team is pleased to announce the first release candidate of PHP 8.6.0, RC3. This continues the PHP 8.6 release cycle, whose rough outline is sp",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -626,6 +521,111 @@
         "Medium"
       ],
       "threat_overview": "The PHP team is pleased to announce the third beta release of PHP 8.6.0, Beta 3. This continues the PHP 8.6 release cycle, the rough outline of which ",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Beta 2 available for testing",
+      "url": "https://www.php.net/index.php#2026-08-27-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-08-27",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce a new beta release of PHP 8.6.0, Beta 2. This continues the PHP 8.6 release cycle, the rough outline of which is s",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Last Call for the State of PHP Survey",
+      "url": "https://www.php.net/index.php#2026-08-25-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-08-25",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The State of PHP survey is still open, but not for much longer. It asks how PHP is working for you: what you build with, what is painful, and what you",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Beta 1 is available for testing",
+      "url": "https://www.php.net/index.php#2026-08-13-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-08-13",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the first beta release of PHP 8.6.0, Beta 1. This continues the PHP 8.6 release cycle, the rough outline of which ",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Alpha 3 available for testing",
+      "url": "https://www.php.net/index.php#2026-07-30-3",
+      "source": "PHP Security Advisories",
+      "published": "2026-07-30",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the second testing release of PHP 8.6.0, Alpha 3. This continues the PHP 8.6 release cycle, the rough outline of w",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "PHP 8.6.0 Alpha 2 available for testing",
+      "url": "https://www.php.net/index.php#2026-07-16-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-07-16",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "PHP Security Advisories",
+        "Medium"
+      ],
+      "threat_overview": "The PHP team is pleased to announce the second testing release of PHP 8.6.0, Alpha 2. This continues the PHP 8.6 release cycle, the rough outline of w",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

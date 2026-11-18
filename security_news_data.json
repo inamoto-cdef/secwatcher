@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-18 10:30:19",
+  "last_updated": "2026-11-18 18:49:45",
   "items": [
     {
-      "original_title": "プリザンターにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000174.html",
+      "original_title": "メディアテックのMT2713 FIRMWARE等の複数製品における境界外書き込みに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044116.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T15:16+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "株式会社インプリムが提供するプリザンターには、次の複数の脆弱性が存在します。\n<ul><li>情報公開機能における不適切な権限チェック（CWE-863）- CVE-2026-117634</li><li>APIにおけるパストラバーサル（CWE-22）- CVE-2026-121811</li><li",
+      "threat_overview": "DAには境界チェックの欠如があり、そのため境界外書き込みが発生する可能性があります。これにより、攻撃者がデバイスに物理的にアクセスできる場合、追加の実行権限なしでローカルの権限昇格が引き起こされる可能性があります。利用者が操作する必要は悪用においてありません。パッチIDはALPS11468968であ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043765.html",
+      "original_title": "LinuxのLinux Kernelにおける不特定の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044115.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Wordにおける境界外読み取りの脆弱性により、不正な攻撃者がネットワーク越しにコードを実行できる可能性があります。",
+      "threat_overview": "Linuxカーネルにおいて、以下の脆弱性が修正されました。KVM: x86のemulator_pio_inから高速INを廃止しました。__emulator_pio_in()がカーネル内でPIOを処理する際に\"val\"を設定するようになったため、高速PIOではemulator_pio_in()を経由せ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における二重解放に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043764.html",
+      "original_title": "オラクルのOracle One-to-One Fulfillmentにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044114.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Wordのダブルフリーの脆弱性により、不正な攻撃者がネットワーク越しにコードを実行できる可能性があります。",
+      "threat_overview": "Oracle E-Business SuiteのOracle One-to-One Fulfillment製品（コンポーネント：Documents）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。悪用が困難なこの脆弱性により、HTTP経由でネットワー",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043763.html",
+      "original_title": "オラクルのOracle One-to-One Fulfillmentにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044113.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Word におけるスタックベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。",
+      "threat_overview": "Oracle E-Business SuiteのOracle One-to-One Fulfillment製品（コンポーネント：Admin Console UI）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。簡単に悪用可能な脆弱性により、HTTP経由でネ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043762.html",
+      "original_title": "オラクルのOracle One-to-One Fulfillmentにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044112.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Wordのオフバイワンエラーにより、権限のない攻撃者がネットワーク経由で情報を漏洩させる可能性があります。",
+      "threat_overview": "Oracle E-Business SuiteのOracle One-to-One Fulfillment製品（コンポーネント：Javaサーバー）における脆弱性です。対象となるサポートバージョンは12.2.3から12.2.15までです。悪用は難しいものの、この脆弱性により、HTTP経由でネットワーク",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043761.html",
+      "original_title": "オラクルのOracle One-to-One Fulfillmentにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044111.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office WordにおけるUse after freeの脆弱性により、不正な攻撃者がネットワーク経由で任意のコードを実行できる可能性があります。",
+      "threat_overview": "Oracle E-Business SuiteのOracle One-to-One Fulfillment製品（コンポーネント：Documents）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。HTTP経由でのネットワークアクセスを持つ低権",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043760.html",
+      "original_title": "オラクルのOracle Common Applicationsにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044110.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Wordのヒープベースのバッファオーバーフローにより、認証されていない攻撃者がネットワーク経由でコードを実行する可能性があります。",
+      "threat_overview": "Oracle E-Business SuiteのOracle Common Applications製品（コンポーネント：Role Summary）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この悪用が難しい脆弱性により、HTTP経由でネットワーク",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043759.html",
+      "original_title": "オラクルのOracle One-to-One Fulfillmentにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044109.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Word におけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がローカルでコードを実行できる可能性があります。",
+      "threat_overview": "Oracle E-Business SuiteのOracle One-to-One Fulfillment製品（コンポーネント：Documents）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTP経由のネットワークアクセスを持つ低権限の攻撃者に",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043758.html",
+      "original_title": "オラクルのOracle Concurrent Processingにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044108.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Wordのヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性がある問題です。",
+      "threat_overview": "Oracle E-Business SuiteのOracle Concurrent Processing製品（コンポーネント：その他の問題）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。この悪用が難しい脆弱性により、HTTP経由でネットワークアクセス可能",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-043757.html",
+      "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044107.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-17T13:28+09:00",
+      "published": "2026-11-18T13:24+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office Word における数値型間の不適切な変換により、未承認の攻撃者がネットワーク上で情報を漏洩させることが可能になります。",
+      "threat_overview": "Oracle CommunicationsのOracle Communications Billing and Revenue Management製品（コンポーネント：BRMサーバー）には脆弱性があります。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

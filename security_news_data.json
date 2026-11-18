@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-18 18:49:45",
+  "last_updated": "2026-11-19 03:41:36",
   "items": [
     {
       "original_title": "メディアテックのMT2713 FIRMWARE等の複数製品における境界外書き込みに関する脆弱性",
@@ -632,6 +632,27 @@
       ]
     },
     {
+      "original_title": "WordPress 7.1.5 Release",
+      "url": "https://wordpress.org/news/2026/11/wordpress-7-1-5-release/",
+      "source": "WordPress Security News",
+      "published": "Wed, 18 Nov 2026 17:08:59 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "WordPress Security News",
+        "Medium"
+      ],
+      "threat_overview": "This security release features fixes for multiple issues. Because this is a security release, it is recommended that you update your sites immediately",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
       "original_title": "WordPress 7.1.4",
       "url": "https://wordpress.org/news/2026/10/wordpress-7-1-4/",
       "source": "WordPress Security News",
@@ -815,27 +836,6 @@
         "Medium"
       ],
       "threat_overview": "WordPress at 23 is simultaneously both the strongest and most precarious it’s ever been. Last week, we shipped WordPress 7 to the world. In seven days",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "WordPress 6.9.2 Release",
-      "url": "https://wordpress.org/news/2026/03/wordpress-6-9-2-release/",
-      "source": "WordPress Security News",
-      "published": "Tue, 10 Mar 2026 15:43:19 +0000",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "WordPress Security News",
-        "Medium"
-      ],
-      "threat_overview": "WordPress 6.9.2 is now available This is a security release that features several fixes. Because this is a security release, it is recommended that yo",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

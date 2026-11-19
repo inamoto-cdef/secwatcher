@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19 03:41:36",
+  "last_updated": "2026-11-19 09:59:16",
   "items": [
     {
       "original_title": "メディアテックのMT2713 FIRMWARE等の複数製品における境界外書き込みに関する脆弱性",
@@ -212,6 +212,27 @@
       ]
     },
     {
+      "original_title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+      "source": "CISA KEV Catalog",
+      "published": "Wed, 18 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<div class=\"OutlineElement Ltr SCXW266414493 BCX8\">\n<p>CISA has added four new vulnerabilities to its <a href=\"https://www.cisa.gov/known-exploited-vu",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
       "original_title": "Siemens ROS#",
       "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
       "source": "CISA KEV Catalog",
@@ -395,27 +416,6 @@
         "Medium"
       ],
       "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-03.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Siemens RUGGEDCOM APE1808",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-07",
-      "source": "CISA KEV Catalog",
-      "published": "Tue, 17 Nov 26 12:00:00 +0000",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "CISA KEV Catalog",
-        "Medium"
-      ],
-      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-07.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

@@ -1,6 +1,279 @@
 {
-  "last_updated": "2026-11-19 17:38:53",
+  "last_updated": "2026-11-20 03:00:14",
   "items": [
+    {
+      "original_title": "OpenJDKにおけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044393.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T16:12+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "OpenJDKには、次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/122.html\" target=\"_blank\"></a><a href=\"https://www.cve.org/CVERecord?id=CVE-2026",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "ISC BINDにおける複数の脆弱性（2026年10月）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039068.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-10-22T15:11+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "<ul><li><a href=\"https://kb.isc.org/docs/cve-2026-19630\" target=\"_blank\">CVE-2026-19630: Amplified resource exhaustion in inbound message processing</",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Siemens製品に対するアップデート（2026年11月）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-06T18:35+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "新規：10件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fem",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "ブラウザ拡張機能「Win Bird 授業支援」におけるクロスサイトスクリプティングの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000175.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T14:09+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "ウィンバード株式会社が提供するブラウザ拡張機能「Win Bird 授業支援」には、次の脆弱性が存在します。\n<ul><li>クロスサイトスクリプティング（CWE-79）- CVE-2026-129517</li></ul>\nこの脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方が",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における型の取り違えに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044392.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T12:23+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Microsoft Office PowerPointにおける互換性のない型の使用（「型の混乱」）が原因で、権限のない攻撃者がネットワークを介して情報を漏洩させる可能性があります。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "ggml.aiのllama.cppにおけるキャッチされない例外に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044391.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T12:23+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "llama.cpp の b11935 より前の b2877 バージョンには、ggml-rpc サーバーに未処理の例外の脆弱性が存在します。認証されていないリモート攻撃者は、過剰なメッセージ長を送信することで rpc サーバーをクラッシュさせることが可能です。HELLO ハンドシェイクの後、攻撃者は ",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるユーザによる危険なアクションに対する警告の非表示に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044390.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T12:23+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Microsoft Officeの製品UIはユーザーに対して安全でない操作の警告を行わず、不正な攻撃者がネットワーク経由でセキュリティ機能を回避できる状態になっています。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044389.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T12:23+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Microsoft Office PowerPointのヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性がある問題です。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044388.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T12:23+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Microsoft Officeにおけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044387.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-19T12:23+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Microsoft Office PowerPointにおけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がネットワークを介してコードを実行できる可能性があります。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Elecbrakes EB2, VM1, ELBC2000",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-02",
+      "source": "CISA KEV Catalog",
+      "published": "Thu, 19 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-323-02.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "libumqtt",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-03",
+      "source": "CISA KEV Catalog",
+      "published": "Thu, 19 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-323-03.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Autonomy Logic OpenPLC Runtime",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01",
+      "source": "CISA KEV Catalog",
+      "published": "Thu, 19 Nov 26 12:00:00 +0000",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "CISA KEV Catalog",
+        "Medium"
+      ],
+      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-323-01.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
     {
       "original_title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
       "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -23,8 +296,8 @@
       ]
     },
     {
-      "original_title": "Siemens ROS#",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-06",
+      "original_title": "Siemens Simcenter Femap",
+      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
       "source": "CISA KEV Catalog",
       "published": "Tue, 17 Nov 26 12:00:00 +0000",
       "severity": "Medium",
@@ -37,7 +310,7 @@
         "CISA KEV Catalog",
         "Medium"
       ],
-      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-06.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
+      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-10.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -149,10 +422,10 @@
       ]
     },
     {
-      "original_title": "Siemens Simcenter Femap",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-10",
-      "source": "CISA KEV Catalog",
-      "published": "Tue, 17 Nov 26 12:00:00 +0000",
+      "original_title": "Upcoming Critical PHP Security Release",
+      "url": "https://www.php.net/index.php#2026-11-18-1",
+      "source": "PHP Security Advisories",
+      "published": "2026-11-18",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -160,52 +433,10 @@
         "CMS"
       ],
       "tags": [
-        "CISA KEV Catalog",
+        "PHP Security Advisories",
         "Medium"
       ],
-      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-10.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Siemens SIMATIC",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-08",
-      "source": "CISA KEV Catalog",
-      "published": "Tue, 17 Nov 26 12:00:00 +0000",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "CISA KEV Catalog",
-        "Medium"
-      ],
-      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-08.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "Siemens Industrial Automation Software Products",
-      "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-321-03",
-      "source": "CISA KEV Catalog",
-      "published": "Tue, 17 Nov 26 12:00:00 +0000",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "CISA KEV Catalog",
-        "Medium"
-      ],
-      "threat_overview": "<p><a href=\"https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-321-03.json\"><strong>View CSAF</strong></a></p>\n<h2>Summary<",
+      "threat_overview": "The PHP security team announces upcoming security releases scheduled for Thursday, 19 November 2026, between 14:00 and 14:30 UTC. These releases are p",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -395,27 +626,6 @@
         "Medium"
       ],
       "threat_overview": "The PHP team is pleased to announce the first release candidate of PHP 8.6.0, RC2. It is not a typo: a mistake was made while packaging RC1, so RC2 wa",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "PHP 8.6.0 Beta 3 is available for testing",
-      "url": "https://www.php.net/index.php#2026-09-10-1",
-      "source": "PHP Security Advisories",
-      "published": "2026-09-10",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "PHP Security Advisories",
-        "Medium"
-      ],
-      "threat_overview": "The PHP team is pleased to announce the third beta release of PHP 8.6.0, Beta 3. This continues the PHP 8.6 release cycle, the rough outline of which ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

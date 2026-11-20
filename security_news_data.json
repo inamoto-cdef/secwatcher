@@ -1,6 +1,27 @@
 {
-  "last_updated": "2026-11-20 09:33:59",
+  "last_updated": "2026-11-20 17:09:47",
   "items": [
+    {
+      "original_title": "SoftBank製Airターミナル6におけるOSコマンドインジェクションの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000172.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-12T12:26+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "ソフトバンク株式会社が提供するAirターミナル6には、次の脆弱性が存在します。<ul><li>OSコマンドインジェクション（CWE-78）- CVE-2026-101107</li></ul>この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/C",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
     {
       "original_title": "OpenJDKにおけるヒープベースのバッファオーバーフローの脆弱性",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044393.html",
@@ -185,27 +206,6 @@
         "Medium"
       ],
       "threat_overview": "Microsoft Officeにおけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044387.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T12:23+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Microsoft Office PowerPointにおけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がネットワークを介してコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

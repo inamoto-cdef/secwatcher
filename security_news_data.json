@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-24 11:01:43",
+  "last_updated": "2026-11-24 22:22:12",
   "items": [
     {
-      "original_title": "SoftBank製Airターミナル6におけるOSコマンドインジェクションの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000172.html",
+      "original_title": "Zoraxyにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000179.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-12T12:26+09:00",
+      "published": "2026-11-24T13:54+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,49 +16,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "ソフトバンク株式会社が提供するAirターミナル6には、次の脆弱性が存在します。<ul><li>OSコマンドインジェクション（CWE-78）- CVE-2026-101107</li></ul>この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/C",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "OpenJDKにおけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044393.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T16:12+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "OpenJDKには、次の脆弱性が存在します。<a href=\"https://cwe.mitre.org/data/definitions/122.html\" target=\"_blank\"></a><a href=\"https://www.cve.org/CVERecord?id=CVE-2026",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "ISC BINDにおける複数の脆弱性（2026年10月）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039068.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-10-22T15:11+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "<ul><li><a href=\"https://kb.isc.org/docs/cve-2026-19630\" target=\"_blank\">CVE-2026-19630: Amplified resource exhaustion in inbound message processing</",
+      "threat_overview": "Zoraxy Projectが提供するZoraxyには、次の複数の脆弱性が存在します。\n<ul><li>管理画面のログビューア機能における格納型クロスサイトスクリプティング（CWE-79）- CVE-2026-105303</li></ul><ul><li>セッションCookieにHttpOnly属",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -79,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "新規：10件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fem",
+      "threat_overview": "新規：12件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fem",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "ブラウザ拡張機能「Win Bird 授業支援」におけるクロスサイトスクリプティングの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000175.html",
+      "original_title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月19日）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044776.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T14:09+09:00",
+      "published": "2026-11-24T13:26+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "ウィンバード株式会社が提供するブラウザ拡張機能「Win Bird 授業支援」には、次の脆弱性が存在します。\n<ul><li>クロスサイトスクリプティング（CWE-79）- CVE-2026-129517</li></ul>\nこの脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方が",
+      "threat_overview": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。\n\n新規：3件<ul><li><a href=\"https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01\" target=",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品における型の取り違えに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044392.html",
+      "original_title": "F5 Networks等の複数ベンダの製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044775.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T12:23+09:00",
+      "published": "2026-11-24T11:37+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office PowerPointにおける互換性のない型の使用（「型の混乱」）が原因で、権限のない攻撃者がネットワークを介して情報を漏洩させる可能性があります。",
+      "threat_overview": "この問題は、HTTP/2 を使用する NGINX Plus または NGINX オープンソースの構成に影響を及ぼします。NGINX が未公開のトラフィックを処理する際、フロー制御ウィンドウが許容される閾値を超える可能性があり、その結果、通常は NGINX ワーカーがセグメンテーションフォルトを伴うヒ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "ggml.aiのllama.cppにおけるキャッチされない例外に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044391.html",
+      "original_title": "F5 Networks等の複数ベンダの製品における解放済みメモリの使用に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044774.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T12:23+09:00",
+      "published": "2026-11-24T11:37+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "llama.cpp の b11935 より前の b2877 バージョンには、ggml-rpc サーバーに未処理の例外の脆弱性が存在します。認証されていないリモート攻撃者は、過剰なメッセージ長を送信することで rpc サーバーをクラッシュさせることが可能です。HELLO ハンドシェイクの後、攻撃者は ",
+      "threat_overview": "NGINX PlusまたはNGINXオープンソースがクライアント接続にHTTP/2を使用するように構成され、クライアントリクエストをバックエンドにプロキシする場合、特別に細工されたリクエストにより、worker_connectionsの残りが少ない状況でワーカープロセスにuse-after-free",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるユーザによる危険なアクションに対する警告の非表示に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044390.html",
+      "original_title": "Vanderbiltのredcapにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044773.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T12:23+09:00",
+      "published": "2026-11-24T11:37+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Officeの製品UIはユーザーに対して安全でない操作の警告を行わず、不正な攻撃者がネットワーク経由でセキュリティ機能を回避できる状態になっています。",
+      "threat_overview": "認証されていないリモートコード実行の脆弱性が、サーベイのパススルー・ルーティングおよびデータインポート処理ロジックに見つかりました。この脆弱性により、悪意のあるユーザーがHTTPリクエストを操作してパブリックサーベイのコンテキストから意図しないコントローラールートへアクセスでき、インポート処理時に細",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044389.html",
+      "original_title": "オラクルのOracle Communications Unified Inventory Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044772.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T12:23+09:00",
+      "published": "2026-11-24T11:37+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Office PowerPointのヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性がある問題です。",
+      "threat_overview": "Oracle CommunicationsのOracle Communications Unified Inventory Management製品（コンポーネント：セキュリティ）に脆弱性があります。影響を受けるサポート対象バージョンは7.5.0、7.5.1、7.6.0、7.7.0、7.8.0および",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044388.html",
+      "original_title": "オラクルのOracle Communications Unified Inventory Managementにおけるアクセス制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044771.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-19T12:23+09:00",
+      "published": "2026-11-24T11:37+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +163,49 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft Officeにおけるヒープベースのバッファオーバーフローの脆弱性により、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。",
+      "threat_overview": "Oracle CommunicationsのOracle Communications Unified Inventory Management製品（コンポーネント：セキュリティ）における脆弱性です。影響を受けるサポート対象バージョンは7.5.0、7.5.1、7.6.0、7.7.0、7.8.0および",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおける重要な機能に対する認証の欠如に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044770.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-24T11:37+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Oracle CommunicationsのOracle Communications Billing and Revenue Management製品（コンポーネント：BRMサーバー）に存在する脆弱性です。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "オラクルのMySQL Cluster等の複数製品におけるリソースの枯渇に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044769.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-24T11:37+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Oracle MySQL の MySQL Server および MySQL Cluster 製品には、Server: Optimizer を含む脆弱性が存在します。影響を受けるサポート対象バージョンは次のとおりです。MySQL Server の影響対象バージョンは 8.4.0-8.4.12、9.7.",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

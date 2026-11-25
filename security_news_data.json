@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-25 16:25:57",
+  "last_updated": "2026-11-26 03:29:39",
   "items": [
     {
-      "original_title": "LiteLLMにおける保護されていない代替チャネルに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-013391.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045183.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-04-30T12:14+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "LiteLLM は 2026年4月8日まで、/guardrails/test_custom_code URI におけるバイトコード書き換えを介してリモートの攻撃者が任意のコードを実行できる脆弱性を含んでいます。",
+      "threat_overview": "Windows Deployment Services のヒープベースのバッファオーバーフローにより、認証された攻撃者がネットワーク経由でコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Synology Inc. の Synology BeeStation OS および DiskStation Manager におけるエンコードおよびエスケープに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2024/JVNDB-2024-029405.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における信頼できないポインタデリファレンスに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045182.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2025-11-21T14:50+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Synology Inc. の Synology BeeStation OS および DiskStation Manager には、エンコードおよびエスケープに関する脆弱性が存在します。",
+      "threat_overview": "Windows Active Directoryのこの問題にはCWEはありませんが、認可された攻撃者がネットワーク経由でサービス拒否を引き起こす可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "optimizelyのWeb Experimentationにおける重要な状態データの外部制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044941.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における境界外読み取りに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045181.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:39+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Optimizely Web Experimentationの2026年11月17日以前のバージョンには、アカウント登録フローの取り扱いに不備があり、攻撃者が制御するコードが特定の cdn.optimizely.com のアセット内にある projectJS（別名 Project JavaScrip",
+      "threat_overview": "Active Directory ドメインサービスにおける範囲外読み取りの脆弱性により、認証された攻撃者がネットワーク経由でサービス拒否攻撃を引き起こすことが可能です。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Siemens製品に対するアップデート（2026年11月）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-042402.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1809等の複数製品における境界外読み取りに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045180.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-06T18:35+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "新規：13件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fem",
+      "threat_overview": "Windows Cloud Files Mini Filter Driverにおける範囲外読み取りの脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能となります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "日立ディスクアレイシステムにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58347)について",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044944.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045179.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:53+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Storage NavigatorにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58347)が存在します。 なお日立ディスクアレイシステムに蓄積されているデータを読み取られることはありません。",
+      "threat_overview": "Microsoft JScriptにおける整数オーバーフローまたはラップアラウンドの脆弱性により、権限のない攻撃者がネットワーク経由でコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "日立ディスクアレイシステムにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58346)について",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044943.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 11 23h2等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045178.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:53+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Storage NavigatorにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58346)が存在します。 なお日立ディスクアレイシステムに蓄積されているデータを読み取られることはありません。",
+      "threat_overview": "デスクトップ ウィンドウ マネージャーのスタックベースのバッファオーバーフローにより、認証された攻撃者がローカルで権限を昇格させることが可能です。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "日立ディスクアレイシステムにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58345)について",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044942.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1809等の複数製品における無効なポインタや参照の解放に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045177.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:53+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "ツールパネルにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58345)が存在します。 なお日立ディスクアレイシステムに蓄積されているデータを読み取られることはありません。",
+      "threat_overview": "Windows DWMのコアライブラリにおける無効なポインターまたは参照の解放により、認可された攻撃者がローカルで特権を昇格させることが可能となります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Paintにおける境界外読み取りに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044940.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1809等の複数製品における無効なポインタや参照の解放に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045176.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:39+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows Paint の境界外読み取りの脆弱性により、不正な攻撃者がローカルでコードを実行できる可能性があります。",
+      "threat_overview": "Windows DWMコアライブラリにおける無効なポインタまたは参照の解放が原因で、認可された攻撃者がローカルで特権を昇格させることが可能になります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのazure-key-vault-certificate等の複数製品における同一生成元ポリシー違反に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044939.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045175.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:39+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Azure Key Vaultのオリジン検証エラーにより、権限のない攻撃者がネットワークを介して情報を漏洩させる可能性があります。",
+      "threat_overview": "Windowsリダイレクトドライブバッファリングにおけるヒープベースのバッファオーバーフローにより、認証済みの攻撃者がローカルで権限を昇格させることが可能となります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "デルのdata domain operating systemにおける認証に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044938.html",
+      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における解放済みメモリの使用に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045174.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T10:39+09:00",
+      "published": "2026-11-25T12:35+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Dell PowerProtect Data Domain の Feature Release バージョン 7.7.1.0 から 8.8、LTS2024 リリースバージョン 7.13.1.0 から 7.13.1.80、LTS2025 リリースバージョン 8.3.1.0 から 8.3.1.40、LTS",
+      "threat_overview": "Windows Telephony ServiceにおけるUse after freeの脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能です。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

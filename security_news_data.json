@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-25 08:24:54",
+  "last_updated": "2026-11-25 16:25:57",
   "items": [
     {
-      "original_title": "Zoraxyにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000179.html",
+      "original_title": "LiteLLMにおける保護されていない代替チャネルに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-013391.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T13:54+09:00",
+      "published": "2026-04-30T12:14+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,7 +16,49 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Zoraxy Projectが提供するZoraxyには、次の複数の脆弱性が存在します。\n<ul><li>管理画面のログビューア機能における格納型クロスサイトスクリプティング（CWE-79）- CVE-2026-105303</li></ul><ul><li>セッションCookieにHttpOnly属",
+      "threat_overview": "LiteLLM は 2026年4月8日まで、/guardrails/test_custom_code URI におけるバイトコード書き換えを介してリモートの攻撃者が任意のコードを実行できる脆弱性を含んでいます。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "Synology Inc. の Synology BeeStation OS および DiskStation Manager におけるエンコードおよびエスケープに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2024/JVNDB-2024-029405.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2025-11-21T14:50+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Synology Inc. の Synology BeeStation OS および DiskStation Manager には、エンコードおよびエスケープに関する脆弱性が存在します。",
+      "user_actions": [
+        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
+        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
+      ]
+    },
+    {
+      "original_title": "optimizelyのWeb Experimentationにおける重要な状態データの外部制御に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044941.html",
+      "source": "JVN (Japan Vulnerability Notes)",
+      "published": "2026-11-25T10:39+09:00",
+      "severity": "Medium",
+      "affected_tech": [
+        "Web Server",
+        "PHP",
+        "CMS"
+      ],
+      "tags": [
+        "JVN (Japan Vulnerability Notes)",
+        "Medium"
+      ],
+      "threat_overview": "Optimizely Web Experimentationの2026年11月17日以前のバージョンには、アカウント登録フローの取り扱いに不備があり、攻撃者が制御するコードが特定の cdn.optimizely.com のアセット内にある projectJS（別名 Project JavaScrip",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
@@ -37,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "新規：12件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fem",
+      "threat_overview": "新規：13件<ul><li><a href=\"https://cert-portal.siemens.com/productcert/html/ssa-105852.html\">SSA-105852: Out of Bounds Read Vulnerability in Simcenter Fem",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月19日）",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044776.html",
+      "original_title": "日立ディスクアレイシステムにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58347)について",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044944.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T13:26+09:00",
+      "published": "2026-11-25T10:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。\n\n新規：3件<ul><li><a href=\"https://www.cisa.gov/news-events/ics-advisories/icsa-26-323-01\" target=",
+      "threat_overview": "Storage NavigatorにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58347)が存在します。 なお日立ディスクアレイシステムに蓄積されているデータを読み取られることはありません。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "F5 Networks等の複数ベンダの製品における複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044775.html",
+      "original_title": "日立ディスクアレイシステムにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58346)について",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044943.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
+      "published": "2026-11-25T10:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "この問題は、HTTP/2 を使用する NGINX Plus または NGINX オープンソースの構成に影響を及ぼします。NGINX が未公開のトラフィックを処理する際、フロー制御ウィンドウが許容される閾値を超える可能性があり、その結果、通常は NGINX ワーカーがセグメンテーションフォルトを伴うヒ",
+      "threat_overview": "Storage NavigatorにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58346)が存在します。 なお日立ディスクアレイシステムに蓄積されているデータを読み取られることはありません。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "F5 Networks等の複数ベンダの製品における解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044774.html",
+      "original_title": "日立ディスクアレイシステムにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58345)について",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044942.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
+      "published": "2026-11-25T10:53+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "NGINX PlusまたはNGINXオープンソースがクライアント接続にHTTP/2を使用するように構成され、クライアントリクエストをバックエンドにプロキシする場合、特別に細工されたリクエストにより、worker_connectionsの残りが少ない状況でワーカープロセスにuse-after-free",
+      "threat_overview": "ツールパネルにおけるOSコマンドインジェクションの脆弱性(CVE-2024-58345)が存在します。 なお日立ディスクアレイシステムに蓄積されているデータを読み取られることはありません。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "Vanderbiltのredcapにおける複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044773.html",
+      "original_title": "マイクロソフトのMicrosoft Paintにおける境界外読み取りに関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044940.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
+      "published": "2026-11-25T10:39+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "認証されていないリモートコード実行の脆弱性が、サーベイのパススルー・ルーティングおよびデータインポート処理ロジックに見つかりました。この脆弱性により、悪意のあるユーザーがHTTPリクエストを操作してパブリックサーベイのコンテキストから意図しないコントローラールートへアクセスでき、インポート処理時に細",
+      "threat_overview": "Windows Paint の境界外読み取りの脆弱性により、不正な攻撃者がローカルでコードを実行できる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "オラクルのOracle Communications Unified Inventory Managementにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044772.html",
+      "original_title": "マイクロソフトのazure-key-vault-certificate等の複数製品における同一生成元ポリシー違反に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044939.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
+      "published": "2026-11-25T10:39+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Oracle CommunicationsのOracle Communications Unified Inventory Management製品（コンポーネント：セキュリティ）に脆弱性があります。影響を受けるサポート対象バージョンは7.5.0、7.5.1、7.6.0、7.7.0、7.8.0および",
+      "threat_overview": "Azure Key Vaultのオリジン検証エラーにより、権限のない攻撃者がネットワークを介して情報を漏洩させる可能性があります。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "オラクルのOracle Communications Unified Inventory Managementにおけるアクセス制御に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044771.html",
+      "original_title": "デルのdata domain operating systemにおける認証に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044938.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
+      "published": "2026-11-25T10:39+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,49 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Oracle CommunicationsのOracle Communications Unified Inventory Management製品（コンポーネント：セキュリティ）における脆弱性です。影響を受けるサポート対象バージョンは7.5.0、7.5.1、7.6.0、7.7.0、7.8.0および",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのOracle Communications Billing and Revenue Managementにおける重要な機能に対する認証の欠如に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044770.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle CommunicationsのOracle Communications Billing and Revenue Management製品（コンポーネント：BRMサーバー）に存在する脆弱性です。影響を受けるサポート対象バージョンは15.0.0.0.0、15.0.1.0.0、15.1.0",
-      "user_actions": [
-        "サーバー管理画面でWAF設定が有効になっているか確認してください。",
-        "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
-      ]
-    },
-    {
-      "original_title": "オラクルのMySQL Cluster等の複数製品におけるリソースの枯渇に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-044769.html",
-      "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-24T11:37+09:00",
-      "severity": "Medium",
-      "affected_tech": [
-        "Web Server",
-        "PHP",
-        "CMS"
-      ],
-      "tags": [
-        "JVN (Japan Vulnerability Notes)",
-        "Medium"
-      ],
-      "threat_overview": "Oracle MySQL の MySQL Server および MySQL Cluster 製品には、Server: Optimizer を含む脆弱性が存在します。影響を受けるサポート対象バージョンは次のとおりです。MySQL Server の影響対象バージョンは 8.4.0-8.4.12、9.7.",
+      "threat_overview": "Dell PowerProtect Data Domain の Feature Release バージョン 7.7.1.0 から 8.8、LTS2024 リリースバージョン 7.13.1.0 から 7.13.1.80、LTS2025 リリースバージョン 8.3.1.0 から 8.3.1.40、LTS",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"

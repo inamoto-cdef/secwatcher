@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-11-26 11:04:38",
+  "last_updated": "2026-11-26 20:58:35",
   "items": [
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045183.html",
+      "original_title": "OpenSSLにおける脆弱性に対するアップデート（2026年11月24日）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045362.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T15:25+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -16,17 +16,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows Deployment Services のヒープベースのバッファオーバーフローにより、認証された攻撃者がネットワーク経由でコードを実行できる可能性があります。",
+      "threat_overview": "OpenSSL ProjectからOpenSSL Security Advisory [24th November 2026]が公開されました。\n<ul><li><a href=\"https://openssl-library.org/news/secadv/20261124.txt\" target",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における信頼できないポインタデリファレンスに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045182.html",
+      "original_title": "CISA ICS Advisory / ICS Medical Advisory（2026年11月24日）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045361.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T15:25+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -37,17 +37,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows Active Directoryのこの問題にはCWEはありませんが、認可された攻撃者がネットワーク経由でサービス拒否を引き起こす可能性があります。",
+      "threat_overview": "米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。\n\n新規：3件<ul><li><a href=\"https://www.cisa.gov/news-events/ics-advisories/icsa-26-328-01\" target=",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における境界外読み取りに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045181.html",
+      "original_title": "Apache Tomcatにおける複数の脆弱性（2026年11月19日）",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045360.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T15:25+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -58,17 +58,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Active Directory ドメインサービスにおける範囲外読み取りの脆弱性により、認証された攻撃者がネットワーク経由でサービス拒否攻撃を引き起こすことが可能です。",
+      "threat_overview": "e Apache Software Foundationから、Apache Tomcatの11件の脆弱性に対してアドバイザリが公開されました。\n<ul><li><a href=\"https://tomcat.apache.org/security-11.html#Fixed_in_Apache_To",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1809等の複数製品における境界外読み取りに関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045180.html",
+      "original_title": "Cosminexusにおける脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045359.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T15:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -79,17 +79,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows Cloud Files Mini Filter Driverにおける範囲外読み取りの脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能となります。",
+      "threat_overview": "Cosminexus Developer's Kit for Java(TM)に下記の脆弱性が存在します。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045179.html",
+      "original_title": "Cosminexusにおける脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045358.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T15:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -100,17 +100,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Microsoft JScriptにおける整数オーバーフローまたはラップアラウンドの脆弱性により、権限のない攻撃者がネットワーク経由でコードを実行できる可能性があります。",
+      "threat_overview": "Cosminexusにおいて，制限付きディレクトリへのパスネームの不適切な制限に関する脆弱性が存在します。",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 11 23h2等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045178.html",
+      "original_title": "Hitachi Command Suite製品, Hitachi Automation Director, Hitachi Configuration Manager, Hitachi Infrastructure Analytics AdvisorおよびHitachi Ops Center製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045357.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T15:20+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -121,17 +121,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "デスクトップ ウィンドウ マネージャーのスタックベースのバッファオーバーフローにより、認証された攻撃者がローカルで権限を昇格させることが可能です。",
+      "threat_overview": "Hitachi Command Suite製品, Hitachi Automation Director, Hitachi Configuration Manager, Hitachi Infrastructure Analytics AdvisorおよびHitachi Ops Center製品に複",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1809等の複数製品における無効なポインタや参照の解放に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045177.html",
+      "original_title": "Androidアプリ「東京消防庁公式アプリ」におけるパストラバーサルの脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000180.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T12:26+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -142,17 +142,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows DWMのコアライブラリにおける無効なポインターまたは参照の解放により、認可された攻撃者がローカルで特権を昇格させることが可能となります。",
+      "threat_overview": "東京消防庁が提供する東京消防庁公式アプリには、次の脆弱性が存在します。<ul><li>パストラバーサル（CWE-22）- CVE-2026-133530</li></ul>この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1809等の複数製品における無効なポインタや参照の解放に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045176.html",
+      "original_title": "baserCMSにおける複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000170.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T12:17+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -163,17 +163,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows DWMコアライブラリにおける無効なポインタまたは参照の解放が原因で、認可された攻撃者がローカルで特権を昇格させることが可能になります。",
+      "threat_overview": "baserCMSユーザー会が提供するbaserCMSには、次の複数の脆弱性が存在します。\n<ul><li>サーバサイドリクエストフォージェリ（CWE-918）- CVE-2026-116089</li><li>信頼できない入力値に依存したセキュリティ判断（CWE-807）- CVE-2026-120",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045175.html",
+      "original_title": "Xen Orchestraの(VATES) Xen Orchestra等の複数製品における複数の脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045356.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T12:14+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -184,17 +184,17 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windowsリダイレクトドライブバッファリングにおけるヒープベースのバッファオーバーフローにより、認証済みの攻撃者がローカルで権限を昇格させることが可能となります。",
+      "threat_overview": "XO（Xen Orchestra）は、XCP-ng（またはXenServer）インフラストラクチャを可視化、管理、バックアップ、および委任するためのソリューションです。バージョン6.9.2および6.10.1以前では、RESTクッキーの解析が authenticationToken=j:%7B%7D ",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
       ]
     },
     {
-      "original_title": "マイクロソフトのMicrosoft Windows 10 1607等の複数製品における解放済みメモリの使用に関する脆弱性",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045174.html",
+      "original_title": "シーメンスのHeliox Flex 180 kW Firmware等の複数製品における意図するエンドポイントとの通信チャネルの制限に関する脆弱性",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-045355.html",
       "source": "JVN (Japan Vulnerability Notes)",
-      "published": "2026-11-25T12:35+09:00",
+      "published": "2026-11-26T12:14+09:00",
       "severity": "Medium",
       "affected_tech": [
         "Web Server",
@@ -205,7 +205,7 @@
         "JVN (Japan Vulnerability Notes)",
         "Medium"
       ],
-      "threat_overview": "Windows Telephony ServiceにおけるUse after freeの脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能です。",
+      "threat_overview": "Heliox Flex 180 kW EV充電ステーション（すべてのバージョン ＜ F4.11.1）およびHeliox Mobile DC 40 kW EV充電ステーション（すべてのバージョン ＜ L4.10.1）に脆弱性が確認されました。影響を受けるデバイスは不適切なアクセス制御を含んでおり、攻撃",
       "user_actions": [
         "サーバー管理画面でWAF設定が有効になっているか確認してください。",
         "最新のセキュリティパッチ適用状況を確認し、CMSやプラグインを更新してください。"
